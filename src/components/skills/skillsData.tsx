@@ -19,13 +19,13 @@ export const skillCategories: SkillCategory[] = [
   {
     id: "languages",
     number: "01",
-    title: "Programming Languages",
-    description: "Core languages used for high-performance server architectures, algorithms, and type-safe systems.",
+    title: "Languages",
+    description: "Core languages used for high-throughput server backends, distributed algorithms, data manipulation, and web interfaces.",
     skills: [
       {
         id: "java",
         name: "Java",
-        category: "Programming Languages",
+        category: "Languages",
         icon: (
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
@@ -37,21 +37,46 @@ export const skillCategories: SkillCategory[] = [
         ),
       },
       {
-        id: "typescript",
-        name: "TypeScript",
-        category: "Programming Languages",
+        id: "sql",
+        name: "SQL",
+        category: "Languages",
         icon: (
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <rect x="3" y="3" width="18" height="18" rx="3" />
-            <path d="M7 8h6m-3 0v8" />
-            <path d="M15 11.5c.5-.7 1.2-1 2-1 1.4 0 2.2.8 2.2 2 0 1.5-1.4 2-2.2 2.5-.8.5-1.5 1-1.5 1.8 0 1.1 1 1.7 2.2 1.7.9 0 1.6-.3 2.1-.9" />
+            <ellipse cx="12" cy="5" rx="9" ry="3" />
+            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+          </svg>
+        ),
+      },
+      {
+        id: "cpp",
+        name: "C++",
+        category: "Languages",
+        icon: (
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M9 7a5 5 0 0 0-5 5 5 5 0 0 0 5 5c2 0 3.5-1 4.3-2.5" />
+            <path d="M14 12h3m-1.5-1.5v3" />
+            <path d="M19 12h3m-1.5-1.5v3" />
+          </svg>
+        ),
+      },
+      {
+        id: "go",
+        name: "Go",
+        category: "Languages",
+        icon: (
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <circle cx="17" cy="12" r="4" />
+            <path d="M10 8H6a4 4 0 1 0 4 4v-1H7.5" />
+            <path d="M2 10h2" />
+            <path d="M1 13h3" />
           </svg>
         ),
       },
       {
         id: "javascript",
         name: "JavaScript",
-        category: "Programming Languages",
+        category: "Languages",
         icon: (
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <rect x="3" y="3" width="18" height="18" rx="3" />
@@ -61,39 +86,36 @@ export const skillCategories: SkillCategory[] = [
         ),
       },
       {
-        id: "python",
-        name: "Python",
-        category: "Programming Languages",
+        id: "typescript",
+        name: "TypeScript",
+        category: "Languages",
         icon: (
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <path d="M12 2c3.5 0 4 1.5 4 3.5v2.5H9a2 2 0 0 0-2 2v2H5c-2 0-3.5-.5-3.5-4C1.5 4.5 3 2 6.5 2H12z" />
-            <circle cx="9" cy="5" r="1" fill="currentColor" />
-            <path d="M12 22c-3.5 0-4-1.5-4-3.5v-2.5h7a2 2 0 0 0 2-2v-2h2c2 0 3.5.5 3.5 4 0 3.5-1.5 6-5 6H12z" />
-            <circle cx="15" cy="19" r="1" fill="currentColor" />
+            <rect x="3" y="3" width="18" height="18" rx="3" />
+            <path d="M7 8h6m-3 0v8" />
+            <path d="M15 11.5c.5-.7 1.2-1 2-1 1.4 0 2.2.8 2.2 2 0 1.5-1.4 2-2.2 2.5-.8.5-1.5 1-1.5 1.8 0 1.1 1 1.7 2.2 1.7.9 0 1.6-.3 2.1-.9" />
           </svg>
         ),
       },
       {
-        id: "cpp",
-        name: "C++",
-        category: "Programming Languages",
+        id: "html",
+        name: "HTML",
+        category: "Languages",
         icon: (
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <path d="M10 7a5 5 0 0 0-5 5 5 5 0 0 0 5 5c2 0 3.5-1 4.3-2.5" />
-            <path d="M14 12h3m-1.5-1.5v3" />
-            <path d="M19 12h3m-1.5-1.5v3" />
+            <path d="M4 3l1.8 15.5L12 21l6.2-2.5L20 3H4z" />
+            <path d="M7.5 7h9l-.5 4.5h-8l.3 3 3.7 1 3.7-1 .3-2.5" />
           </svg>
         ),
       },
       {
-        id: "sql",
-        name: "SQL",
-        category: "Programming Languages",
+        id: "css",
+        name: "CSS",
+        category: "Languages",
         icon: (
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <ellipse cx="12" cy="5" rx="9" ry="3" />
-            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
-            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+            <path d="M4 3l1.8 15.5L12 21l6.2-2.5L20 3H4z" />
+            <path d="M16 7H8v4h7.5l-.5 4.5-3 1-3-1-.2-2" />
           </svg>
         ),
       },
@@ -102,13 +124,13 @@ export const skillCategories: SkillCategory[] = [
   {
     id: "frameworks",
     number: "02",
-    title: "Frameworks & Core Skills",
-    description: "Enterprise backend frameworks, modern web runtimes, component architectures, and system design patterns.",
+    title: "Frameworks & Skills",
+    description: "Enterprise backend frameworks, reactive frontends, event streaming brokers, and payment infrastructures.",
     skills: [
       {
         id: "spring-boot",
         name: "Spring Boot",
-        category: "Frameworks & Core Skills",
+        category: "Frameworks & Skills",
         icon: (
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <path d="M12 2C6.48 2 2 6.48 2 12c0 3.69 2.01 6.91 5 8.65V18a5 5 0 0 1 5-5h2a5 5 0 0 0 5-5V7c0-2.76-2.24-5-5-5z" />
@@ -117,21 +139,22 @@ export const skillCategories: SkillCategory[] = [
         ),
       },
       {
-        id: "nextjs",
-        name: "Next.js",
-        category: "Frameworks & Core Skills",
+        id: "axon-framework",
+        name: "Axon Framework",
+        category: "Frameworks & Skills",
         icon: (
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="10" />
-            <path d="M8 8v8l8-9.5" />
-            <path d="M16 11v5" />
+            <circle cx="6" cy="12" r="3" />
+            <circle cx="18" cy="6" r="3" />
+            <circle cx="18" cy="18" r="3" />
+            <path d="M9 12h3m0 0l3-4.5m-3 4.5l3 4.5" />
           </svg>
         ),
       },
       {
         id: "react",
         name: "React",
-        category: "Frameworks & Core Skills",
+        category: "Frameworks & Skills",
         icon: (
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(0 12 12)" />
@@ -142,58 +165,67 @@ export const skillCategories: SkillCategory[] = [
         ),
       },
       {
-        id: "nodejs",
-        name: "Node.js",
-        category: "Frameworks & Core Skills",
+        id: "kafka",
+        name: "Kafka",
+        category: "Frameworks & Skills",
         icon: (
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <path d="M12 2l8 4.5v9L12 20l-8-4.5v-9L12 2z" />
-            <path d="M12 12l8-4.5" />
-            <path d="M12 12v8" />
-            <path d="M12 12L4 7.5" />
+            <circle cx="12" cy="12" r="3" />
+            <circle cx="4" cy="7" r="2" />
+            <circle cx="4" cy="17" r="2" />
+            <circle cx="20" cy="7" r="2" />
+            <circle cx="20" cy="17" r="2" />
+            <path d="M6 8l3.5 2.5m-3.5 5.5l3.5-2.5m5.5-2.5l3.5-2.5m-3.5 5.5l3.5 2.5" />
           </svg>
         ),
       },
       {
-        id: "express",
-        name: "Express",
-        category: "Frameworks & Core Skills",
+        id: "nginx",
+        name: "Nginx",
+        category: "Frameworks & Skills",
         icon: (
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <rect x="2" y="5" width="20" height="14" rx="3" />
-            <path d="M6 9h3a2 2 0 0 1 0 4H6v2" />
-            <path d="M13 15l4-6m-4 0l4 6" />
+            <polygon points="12 2 21 7 21 17 12 22 3 17 3 7 12 2" />
+            <path d="M8 16V8l8 8V8" />
           </svg>
         ),
       },
       {
-        id: "rest-api",
-        name: "RESTful APIs",
-        category: "Frameworks & Core Skills",
+        id: "swagger",
+        name: "Swagger",
+        category: "Frameworks & Skills",
         icon: (
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <path d="M4 11a9 9 0 0 1 9 9" />
-            <path d="M4 4a16 16 0 0 1 16 16" />
-            <circle cx="5" cy="19" r="1" fill="currentColor" />
-            <path d="M16 4h4v4" />
-            <path d="M13 11l7-7" />
+            <circle cx="12" cy="12" r="9" />
+            <path d="M9 9a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2" />
+            <path d="M15 9a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2" />
+            <circle cx="12" cy="12" r="1.5" fill="currentColor" />
           </svg>
         ),
       },
       {
-        id: "oop",
-        name: "OOP & System Design",
-        category: "Frameworks & Core Skills",
+        id: "hls",
+        name: "HLS",
+        category: "Frameworks & Skills",
         icon: (
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <rect x="3" y="3" width="7" height="7" rx="1.5" />
-            <rect x="14" y="3" width="7" height="7" rx="1.5" />
-            <rect x="14" y="14" width="7" height="7" rx="1.5" />
-            <rect x="3" y="14" width="7" height="7" rx="1.5" />
-            <line x1="10" y1="6.5" x2="14" y2="6.5" />
-            <line x1="6.5" y1="10" x2="6.5" y2="14" />
-            <line x1="17.5" y1="10" x2="17.5" y2="14" />
-            <line x1="10" y1="17.5" x2="14" y2="17.5" />
+            <rect x="2" y="4" width="20" height="14" rx="2" />
+            <polygon points="10 8 15 11 10 14 10 8" />
+            <path d="M8 21h8" />
+            <path d="M12 18v3" />
+          </svg>
+        ),
+      },
+      {
+        id: "vnpay",
+        name: "VNPAY Payment Gateway",
+        category: "Frameworks & Skills",
+        icon: (
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <rect x="2" y="5" width="20" height="14" rx="2" />
+            <line x1="2" y1="10" x2="22" y2="10" />
+            <path d="M6 15h4" />
+            <path d="M15 14l2 2 4-4" />
           </svg>
         ),
       },
@@ -203,7 +235,7 @@ export const skillCategories: SkillCategory[] = [
     id: "databases",
     number: "03",
     title: "Databases, Caching & Cloud",
-    description: "Distributed persistence engines, in-memory caches, cloud storage pipelines, and serverless backends.",
+    description: "Relational persistence engines, in-memory caching tiers, cloud object storage, and distributed search engines.",
     skills: [
       {
         id: "postgresql",
@@ -214,18 +246,6 @@ export const skillCategories: SkillCategory[] = [
             <path d="M12 3C7 3 3 6.5 3 11c0 3 1.8 5.6 4.5 7v3l3-1.5c.5.3 1 .4 1.5.5C17 20 21 16.5 21 12c0-5-4-9-9-9z" />
             <path d="M9 11a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
             <path d="M15 11a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-          </svg>
-        ),
-      },
-      {
-        id: "mysql",
-        name: "MySQL",
-        category: "Databases, Caching & Cloud",
-        icon: (
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <ellipse cx="12" cy="6" rx="8" ry="3" />
-            <path d="M4 6v6c0 1.66 3.58 3 8 3s8-1.34 8-3V6" />
-            <path d="M4 12v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6" />
           </svg>
         ),
       },
@@ -242,19 +262,20 @@ export const skillCategories: SkillCategory[] = [
         ),
       },
       {
-        id: "mongodb",
-        name: "MongoDB",
+        id: "caffeine",
+        name: "Caffeine",
         category: "Databases, Caching & Cloud",
         icon: (
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <path d="M12 2C8 6 6 10 6 14a6 6 0 0 0 12 0c0-4-2-8-6-12z" />
-            <line x1="12" y1="2" x2="12" y2="22" />
+            <path d="M17 8h1a3 3 0 0 1 0 6h-1" />
+            <path d="M3 8h14v7a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z" />
+            <path d="M10 2l-2 4h3l-2 4" />
           </svg>
         ),
       },
       {
-        id: "aws-s3",
-        name: "AWS S3",
+        id: "amazon-s3",
+        name: "Amazon S3",
         category: "Databases, Caching & Cloud",
         icon: (
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -265,23 +286,30 @@ export const skillCategories: SkillCategory[] = [
         ),
       },
       {
-        id: "cloudflare",
-        name: "Cloudflare",
+        id: "cloudfront",
+        name: "CloudFront",
         category: "Databases, Caching & Cloud",
         icon: (
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z" />
-            <path d="M15 13l3 3-3 3" />
+            <circle cx="12" cy="12" r="9" />
+            <path d="M12 3a15 15 0 0 1 0 18" />
+            <path d="M12 3a15 15 0 0 0 0 18" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <circle cx="12" cy="12" r="2" fill="currentColor" />
           </svg>
         ),
       },
       {
-        id: "supabase",
-        name: "Supabase",
+        id: "elasticsearch",
+        name: "Elasticsearch",
         category: "Databases, Caching & Cloud",
         icon: (
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+            <circle cx="11" cy="11" r="7" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            <path d="M8 11h6" />
+            <path d="M8 8h4" />
+            <path d="M8 14h3" />
           </svg>
         ),
       },
@@ -291,7 +319,7 @@ export const skillCategories: SkillCategory[] = [
     id: "devops",
     number: "04",
     title: "DevOps & Monitoring",
-    description: "Containerization, orchestration, continuous delivery pipelines, and comprehensive telemetry observation.",
+    description: "Continuous delivery, containerization, cloud pipelines, distributed tracing, and real-time observability.",
     skills: [
       {
         id: "docker",
@@ -310,25 +338,19 @@ export const skillCategories: SkillCategory[] = [
         ),
       },
       {
-        id: "kubernetes",
-        name: "Kubernetes",
+        id: "github-actions",
+        name: "GitHub Actions",
         category: "DevOps & Monitoring",
         icon: (
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="9" />
-            <circle cx="12" cy="12" r="3" />
-            <line x1="12" y1="3" x2="12" y2="9" />
-            <line x1="12" y1="15" x2="12" y2="21" />
-            <line x1="4.2" y1="7.5" x2="9.4" y2="10.5" />
-            <line x1="14.6" y1="13.5" x2="19.8" y2="16.5" />
-            <line x1="4.2" y1="16.5" x2="9.4" y2="13.5" />
-            <line x1="14.6" y1="10.5" x2="19.8" y2="7.5" />
+            <polygon points="5 3 19 12 5 21 5 3" />
+            <circle cx="7" cy="12" r="2" fill="currentColor" />
           </svg>
         ),
       },
       {
         id: "cicd",
-        name: "CI / CD",
+        name: "CI/CD",
         category: "DevOps & Monitoring",
         icon: (
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -341,13 +363,12 @@ export const skillCategories: SkillCategory[] = [
         ),
       },
       {
-        id: "github-actions",
-        name: "GitHub Actions",
+        id: "azure-devops",
+        name: "Azure DevOps",
         category: "DevOps & Monitoring",
         icon: (
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <polygon points="5 3 19 12 5 21 5 3" />
-            <circle cx="7" cy="12" r="2" fill="currentColor" />
+            <path d="M4 17l4-11 5 4 6-6v13l-6 3z" />
           </svg>
         ),
       },
@@ -364,6 +385,21 @@ export const skillCategories: SkillCategory[] = [
         ),
       },
       {
+        id: "tempo",
+        name: "Tempo",
+        category: "DevOps & Monitoring",
+        icon: (
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <line x1="4" y1="6" x2="16" y2="6" strokeWidth="2.5" />
+            <line x1="8" y1="12" x2="20" y2="12" strokeWidth="2.5" />
+            <line x1="6" y1="18" x2="14" y2="18" strokeWidth="2.5" />
+            <circle cx="4" cy="6" r="1.5" fill="currentColor" />
+            <circle cx="8" cy="12" r="1.5" fill="currentColor" />
+            <circle cx="6" cy="18" r="1.5" fill="currentColor" />
+          </svg>
+        ),
+      },
+      {
         id: "grafana",
         name: "Grafana",
         category: "DevOps & Monitoring",
@@ -376,14 +412,24 @@ export const skillCategories: SkillCategory[] = [
         ),
       },
       {
-        id: "linux",
-        name: "Linux",
+        id: "logstash",
+        name: "Logstash",
         category: "DevOps & Monitoring",
         icon: (
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <rect x="3" y="4" width="18" height="16" rx="3" />
-            <path d="M7 9l4 3-4 3" />
-            <line x1="13" y1="15" x2="17" y2="15" />
+            <path d="M4 4h16l-5 8v6l-4 2v-8L4 4z" />
+            <line x1="8" y1="8" x2="14" y2="8" />
+          </svg>
+        ),
+      },
+      {
+        id: "new-relic",
+        name: "New Relic",
+        category: "DevOps & Monitoring",
+        icon: (
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <polygon points="12 2 20 7 20 17 12 22 4 17 4 7" />
+            <polygon points="12 6 17 9.5 17 14.5 12 18 7 14.5 7 9.5" />
           </svg>
         ),
       },
@@ -392,75 +438,29 @@ export const skillCategories: SkillCategory[] = [
   {
     id: "ai-tools",
     number: "05",
-    title: "AI & Productivity Tools",
-    description: "Next-generation developer tooling, agentic programming systems, large language model APIs, and intelligent workflows.",
+    title: "AI & Development Tools",
+    description: "Autonomous agentic coding environments, frontier reasoning models, and intelligence acceleration systems.",
     skills: [
       {
-        id: "cursor",
-        name: "Cursor",
-        category: "AI & Productivity Tools",
+        id: "google-antigravity",
+        name: "Google Antigravity",
+        category: "AI & Development Tools",
         icon: (
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <path d="M3 3l7 18 3-7 7-3L3 3z" />
-            <path d="M13 13l6 6" />
+            <ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(-30 12 12)" />
+            <ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(30 12 12)" />
+            <circle cx="12" cy="12" r="2.5" fill="currentColor" />
           </svg>
         ),
       },
       {
-        id: "claude",
-        name: "Claude",
-        category: "AI & Productivity Tools",
+        id: "claude-opus",
+        name: "Claude Opus 5.5",
+        category: "AI & Development Tools",
         icon: (
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93" />
-          </svg>
-        ),
-      },
-      {
-        id: "openai",
-        name: "OpenAI API",
-        category: "AI & Productivity Tools",
-        icon: (
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="9" />
-            <path d="M12 3a9 9 0 0 1 7.8 4.5M21 12a9 9 0 0 1-4.5 7.8M12 21a9 9 0 0 1-7.8-4.5M3 12a9 9 0 0 1 4.5-7.8" />
-            <circle cx="12" cy="12" r="3" />
-          </svg>
-        ),
-      },
-      {
-        id: "ollama",
-        name: "Ollama",
-        category: "AI & Productivity Tools",
-        icon: (
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="8" />
-            <path d="M8 10h.01M16 10h.01" />
-            <path d="M9 14c1 1.5 5 1.5 6 0" />
-            <path d="M9 4L8 7M15 4l1 3" />
-          </svg>
-        ),
-      },
-      {
-        id: "langchain",
-        name: "LangChain",
-        category: "AI & Productivity Tools",
-        icon: (
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-          </svg>
-        ),
-      },
-      {
-        id: "copilot",
-        name: "GitHub Copilot",
-        category: "AI & Productivity Tools",
-        icon: (
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <path d="M12 3c-4.97 0-9 3.58-9 8 0 2.65 1.48 5 3.75 6.45V20l3.5-1.5c.57.17 1.15.25 1.75.25 4.97 0 9-3.58 9-8s-4.03-8-9-8z" />
-            <circle cx="9" cy="11" r="1.25" fill="currentColor" />
-            <circle cx="15" cy="11" r="1.25" fill="currentColor" />
+            <circle cx="12" cy="12" r="2" fill="currentColor" />
           </svg>
         ),
       },
