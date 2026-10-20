@@ -7,17 +7,21 @@ export default function Project5Detail() {
   return (
     <div className="project-detail-body">
       <div className="project-detail-header">
-        <span className="project-detail-badge">Observability & Monitoring</span>
-        <h2 className="project-detail-title">DevNexus: Distributed Telemetry & Observability Mesh</h2>
+        <span className="project-detail-badge">AI Agents</span>
+        <h2 className="project-detail-title">Saigon Rush</h2>
         <p className="project-detail-subtitle">
-          Centralized observability framework integrating Grafana dashboards, Prometheus time-series metrics, Tempo distributed tracing, and Logstash log shipping.
+          A vibrant, fast-paced Vietnamese-themed 3D endless runner game set in the bustling streets of Ho Chi Minh City (Saigon). Dodge chaotic street traffic, leap over plastic stools, duck under tangled overhead wires, dash up Saigon bus roofs, collect golden Dong coins, and power up with iconic Vietnamese street food delicacies!
         </p>
+      </div>
+
+      <div className="project-detail-section">
+        <h4 className="detail-section-heading">Saigon Rush Overview</h4>
       </div>
 
       <div className="project-detail-banner">
         <Image
-          src="/images/observability-mesh.jpg"
-          alt="DevNexus observability dashboard"
+          src="/images/saigon-rush-core.png"
+          alt="Saigon Rush - Core Gameplay"
           width={800}
           height={450}
           className="project-banner-img"
@@ -25,24 +29,19 @@ export default function Project5Detail() {
       </div>
 
       <div className="project-detail-section">
-        <h4 className="detail-section-heading">System Overview & Architecture</h4>
-        <p>
-          DevNexus delivers deep visibility across distributed microservices by correlating trace IDs across asynchronous message boundaries. 
-          It captures CPU, memory saturation, endpoint request latencies, and structured logs, presenting an end-to-end health graph on Grafana.
-        </p>
-      </div>
-
-      <div className="project-detail-section">
         <h4 className="detail-section-heading">Key Engineering Highlights</h4>
         <ul className="project-detail-bullets">
           <li>
-            <strong>End-to-End Tracing:</strong> Correlated HTTP and Kafka message headers using W3C Trace Context and Tempo, reducing mean time to identify errors from 25 minutes to under 2 minutes.
+            <strong>Decoupled Game Loop & UI:</strong> Optimized 60 FPS rendering by separating Three.js frame updates from React state management, using direct object references and selective subscriptions to minimize unnecessary re-renders.
           </li>
           <li>
-            <strong>Custom Grafana Dashboards:</strong> Designed production dashboards visualizing P50/P90/P99 latency trends, JVM heap utilization, and database connection pool health.
+            <strong>Infinite World & Object Pooling:</strong> Implemented object pooling to recycle track segments, obstacles, and coins, reducing garbage collection overhead and maintaining smooth gameplay performance.
           </li>
           <li>
-            <strong>Automated Alerting Engine:</strong> Configured Prometheus Alertmanager rules notifying on error rate spikes and impending certificate expirations.
+            <strong>Fail-Safe 3D Asset Pipeline:</strong> Integrated external GLTF/GLB models with procedural low-poly Three.js fallbacks, ensuring game entities render reliably even when external assets fail to load.
+          </li>
+          <li>
+            <strong>Optimized Collision Detection:</strong> Implemented lightweight AABB collision detection using THREE.Box3 to perform real-time collision checks while avoiding the overhead of a full physics engine.
           </li>
         </ul>
       </div>
@@ -50,19 +49,16 @@ export default function Project5Detail() {
       <div className="project-detail-section">
         <h4 className="detail-section-heading">Tech Stack & Tools</h4>
         <div className="project-tech-chips">
-          <span>Grafana</span>
-          <span>Prometheus</span>
-          <span>Tempo</span>
-          <span>Logstash</span>
-          <span>OpenTelemetry</span>
-          <span>Spring Boot</span>
-          <span>Docker</span>
+          <span>Google Antigravity</span>
+          <span>Claude Opus 5.5</span>
+          <span>React</span>
+          <span>Threejs</span>
         </div>
       </div>
 
       <div className="project-detail-actions">
         <a
-          href="https://devnexus.hemlock.dev"
+          href="https://www.youtube.com/watch?v=xAmkN12MT7Y"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-primary"
@@ -70,7 +66,7 @@ export default function Project5Detail() {
           Live Demo Platform
         </a>
         <a
-          href="https://github.com/HemlockPham7/devnexus-telemetry"
+          href="https://github.com/HemlockPham7/saigonrush"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-secondary"
