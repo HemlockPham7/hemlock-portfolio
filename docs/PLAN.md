@@ -144,7 +144,7 @@ Showcase professional career progression using a centralized vertical timeline w
 Build a comprehensive 6-project showcase in a structured grid layout, backed by dedicated detailed pages/components for each project.
 
 #### Key Tasks
-- [ ] **6 Base Project Cards (Grid Layout):**
+- [x] **6 Base Project Cards (Grid Layout):**
   - Implement a responsive CSS Grid (3 columns on desktop, 2 columns on tablet, 1 column on mobile).
   - Card specifications:
     - **Visual Thumbnail:** High-resolution optimized image/graphic preview.
@@ -155,15 +155,16 @@ Build a comprehensive 6-project showcase in a structured grid layout, backed by 
       - **Live Demo Button:** Direct external link or interactive preview.
       - **GitHub Repo Button:** Direct link to code repository.
       - Detail Trigger: Link/button to open the full project case study.
-- [ ] **6 Dedicated Project Detail TSX Files/Routes:**
-  - Create 6 separate TSX page components (or modular routes under `src/app/projects/[slug]` / dedicated views):
-    1. Project 1 Detail TSX
-    2. Project 2 Detail TSX
-    3. Project 3 Detail TSX
-    4. Project 4 Detail TSX
-    5. Project 5 Detail TSX
-    6. Project 6 Detail TSX
+- [x] **6 Dedicated Project Detail TSX Files/Routes:**
+  - Create 6 separate TSX page components:
+    1. `src/components/projects/details/Project1Detail.tsx` (Amplio: Enterprise Financial & Tax Platform)
+    2. `src/components/projects/details/Project2Detail.tsx` (CineStream: Distributed Movie Ticket & Payment Mesh)
+    3. `src/components/projects/details/Project3Detail.tsx` (Kestrel: Resilient Stream Processing Broker)
+    4. `src/components/projects/details/Project4Detail.tsx` (CloudVault: S3 Cloud-Native Ingestion Pipeline)
+    5. `src/components/projects/details/Project5Detail.tsx` (DevNexus: Distributed Telemetry & Observability Mesh)
+    6. `src/components/projects/details/Project6Detail.tsx` (AlgoArena: Real-Time Algorithmic Judge System)
   - Detail components cover: Architecture diagram/breakdown, database schema overview, key challenges, performance benchmarks, and repository links.
+  - Accessible modal dialog component `src/components/projects/ProjectDetailModal.tsx` with ESC key listener, background scroll lock, and responsive mobile styling.
 
 #### Acceptance Criteria
 - Exactly 6 project cards rendered cleanly in a uniform grid.
@@ -211,7 +212,7 @@ Provide a comprehensive, visually engaging technical skills section organized in
 | **M1** | Phase 1 (Hero) | **Completed** | `public/cv.pdf`, `src/app/page.tsx`, `src/app/globals.css` | Verify CV download, `#projects` jump, social icons clickability |
 | **M2** | Phase 2 (About) | **Completed** | `src/app/page.tsx`, `src/app/globals.css` | Review HCMUS degree text, 1.5+ yrs bio, 3 award cards layout |
 | **M3** | Phase 3 (Experiences) | **Completed** | `src/components/experiences/*`, `src/app/page.tsx`, `src/app/globals.css` | Verify central timeline, alternating cards, detail click handler |
-| **M4** | Phase 4 (Projects) | Pending | `src/components/projects/*`, 6 detail TSX views | Verify 6-card grid, Live/GitHub buttons, 6 detail pages |
+| **M4** | Phase 4 (Projects) | **Completed** | `src/components/projects/*`, 6 detail TSX views | Verify 6-card grid, Live/GitHub buttons, 6 detail pages |
 | **M5** | Phase 5 (Skills) | Pending | `src/components/skills/*`, skill icons | Verify 5 categorized rows, icon + label alignment, hover states |
 
 ---

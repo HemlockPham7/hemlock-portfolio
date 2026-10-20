@@ -5,16 +5,22 @@ import Image from "next/image";
 import NetcompanyDetail from "@/components/experiences/NetcompanyDetail";
 import PreviousJobDetail from "@/components/experiences/PreviousJobDetail";
 import ExperienceModal from "@/components/experiences/ExperienceModal";
+import ProjectDetailModal from "@/components/projects/ProjectDetailModal";
+import Project1Detail from "@/components/projects/details/Project1Detail";
+import Project2Detail from "@/components/projects/details/Project2Detail";
+import Project3Detail from "@/components/projects/details/Project3Detail";
+import Project4Detail from "@/components/projects/details/Project4Detail";
+import Project5Detail from "@/components/projects/details/Project5Detail";
+import Project6Detail from "@/components/projects/details/Project6Detail";
 
-interface CaseStudy {
+interface FeaturedProject {
   id: string;
-  category: string;
   title: string;
   description: string;
   image: string;
-  metricA: { val: string; lbl: string };
-  metricB: { val: string; lbl: string };
-  stack: string[];
+  tags: string[];
+  liveDemo: string;
+  github: string;
 }
 
 interface AwardItem {
@@ -31,6 +37,9 @@ interface AwardItem {
 export default function PortfolioPage() {
   // Experience Details Modal State
   const [activeExpModal, setActiveExpModal] = useState<"netcompany" | "previous" | null>(null);
+
+  // Project Details Modal State (6 Dedicated Projects)
+  const [activeProjectModal, setActiveProjectModal] = useState<string | null>(null);
 
   // Section 4 Interactive Simulator State
   const [clusterNodes, setClusterNodes] = useState<number>(8);
@@ -83,39 +92,66 @@ export default function PortfolioPage() {
     };
   }, [clusterNodes, requestLoad, cacheStrategy]);
 
-  const caseStudies: CaseStudy[] = [
+  const featuredProjects: FeaturedProject[] = [
     {
-      id: "stratastream",
-      category: "Distributed Telemetry and Event Mesh",
-      title: "StrataStream: High-Throughput Real-Time Event Fabric",
+      id: "amplio",
+      title: "Amplio: Enterprise Financial & Tax Platform",
       description:
-        "Architected a distributed event ingestion pipeline handling over 1.8 billion daily telemetry signals from IoT devices and edge gateways with strict sub-45ms delivery guarantees.",
+        "Enterprise financial, tax computation, and lending management platform with microservices, Redis caching, and real-time Kafka event streaming.",
       image: "/images/distributed-system.jpg",
-      metricA: { val: "1.8B+", lbl: "Daily Events Processed" },
-      metricB: { val: "38ms", lbl: "Global p99 Ingestion Latency" },
-      stack: ["Go", "Apache Kafka", "ClickHouse", "Kubernetes", "gRPC", "Protobuf"],
+      tags: ["Java", "Spring Boot", "Kafka", "PostgreSQL", "Redis", "Docker"],
+      liveDemo: "https://github.com/HemlockPham7",
+      github: "https://github.com/HemlockPham7",
+    },
+    {
+      id: "cinestream",
+      title: "CineStream: Distributed Movie Ticket & Payment Mesh",
+      description:
+        "Distributed ticket booking and seat reservation engine powered by CQRS, Event Sourcing (Axon), Saga distributed transactions, and VNPay integration.",
+      image: "/images/streaming-engine.jpg",
+      tags: ["Java", "Spring Boot", "Axon Framework", "React", "VNPay", "PostgreSQL"],
+      liveDemo: "https://github.com/HemlockPham7",
+      github: "https://github.com/HemlockPham7",
     },
     {
       id: "kestrel",
-      category: "Fault-Tolerant Broker Orchestration",
-      title: "Kestrel: Resilient Stream Processing Engine",
+      title: "Kestrel: Resilient Stream Processing Broker",
       description:
-        "Engineered an exactly-once distributed message processing broker capable of automatic partitioned failover across dual cloud regions without data duplication.",
-      image: "/images/streaming-engine.jpg",
-      metricA: { val: "1.2 GB/s", lbl: "Peak Throughput" },
-      metricB: { val: "99.999%", lbl: "Data Durability Guarantee" },
-      stack: ["Rust", "Tokio", "PostgreSQL", "AWS ECS", "OpenTelemetry", "Docker"],
+        "Fault-tolerant event stream processing broker with exactly-once delivery guarantees, automatic partitioned failover, and sub-15ms processing latency.",
+      image: "/images/devtools-profiler.jpg",
+      tags: ["Rust", "Tokio", "Kafka", "PostgreSQL", "Docker", "AWS ECS"],
+      liveDemo: "https://github.com/HemlockPham7",
+      github: "https://github.com/HemlockPham7",
+    },
+    {
+      id: "cloudvault",
+      title: "CloudVault: S3 Cloud-Native Ingestion Pipeline",
+      description:
+        "High-concurrency multipart upload engine and media asset storage orchestration with presigned S3 URLs, AES-256 chunk encryption, and automated transcoding.",
+      image: "/images/cloud-storage.jpg",
+      tags: ["Go", "AWS S3", "Docker", "gRPC", "Redis", "PostgreSQL"],
+      liveDemo: "https://github.com/HemlockPham7",
+      github: "https://github.com/HemlockPham7",
     },
     {
       id: "devnexus",
-      category: "Performance Analysis and Developer Tooling",
-      title: "DevNexus: In-Browser Memory and Framegraph Profiler",
+      title: "DevNexus: Distributed Telemetry & Observability Mesh",
       description:
-        "Built a zero-latency client-side runtime profiler capable of parsing AST trees, heap snapshots, and flamegraphs at 60fps inside modern Chromium browsers.",
-      image: "/images/devtools-profiler.jpg",
-      metricA: { val: "60 FPS", lbl: "Sustained Profiler Render" },
-      metricB: { val: "145k+", lbl: "Monthly Developer Sessions" },
-      stack: ["TypeScript", "Next.js", "WebAssembly", "Web Workers", "Tailored CSS"],
+        "Full-stack observability mesh unifying OpenTelemetry distributed traces, Prometheus metrics collection, Grafana dashboards, and automated alert routing.",
+      image: "/images/observability-mesh.jpg",
+      tags: ["OpenTelemetry", "Prometheus", "Grafana", "Tempo", "Docker", "Node.js"],
+      liveDemo: "https://github.com/HemlockPham7",
+      github: "https://github.com/HemlockPham7",
+    },
+    {
+      id: "algoarena",
+      title: "AlgoArena: Real-Time Algorithmic Judge System",
+      description:
+        "Interactive algorithmic competitive programming sandbox with isolated Docker execution containers, strict memory/CPU limits, and sub-second evaluation.",
+      image: "/images/code-judge.jpg",
+      tags: ["Go", "Docker Sandbox", "WebSocket", "React", "Next.js", "Redis"],
+      liveDemo: "https://github.com/HemlockPham7",
+      github: "https://github.com/HemlockPham7",
     },
   ];
 
@@ -552,63 +588,116 @@ export default function PortfolioPage() {
           </div>
         </section>
 
-        {/* SECTION 4: FLAGSHIP PRODUCTION PROJECTS (Layout Family C: Alternating Case-Study Split) */}
+        {/* SECTION 4: FEATURED PROJECTS (6 Item Cards & Dedicated Detail Modals) */}
         <section id="projects" className="portfolio-section">
           <div className="site-container">
             <div className="section-head">
-              <h2 className="section-title">Selected Production Systems and Flagship Projects</h2>
+              <h2 className="section-title">Featured Projects & Technical Works</h2>
               <p className="section-description">
-                Real-world engineering case studies showing architectural trade-offs, constraints, and verifiable business results.
+                Production-grade backend architectures, distributed event pipelines, and full-stack systems. Click any card to inspect full system architecture, database design, and key engineering challenges.
               </p>
             </div>
 
-            <div className="case-studies-stack">
-              {caseStudies.map((project, idx) => (
-                <article
+            <div className="projects-grid">
+              {featuredProjects.map((project) => (
+                <div
                   key={project.id}
-                  className={`case-study-item ${idx % 2 === 1 ? "reverse" : ""}`}
+                  className="project-card"
+                  tabIndex={0}
+                  role="region"
+                  aria-label={`${project.title} card`}
                 >
-                  <div className="case-media-frame">
+                  <div
+                    className="project-thumb-wrap"
+                    onClick={() => setActiveProjectModal(project.id)}
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={(e) => e.key === "Enter" && setActiveProjectModal(project.id)}
+                    aria-label={`View architecture details for ${project.title}`}
+                  >
                     <Image
                       src={project.image}
                       alt={project.title}
-                      width={800}
-                      height={500}
+                      width={600}
+                      height={338}
+                      className="project-thumb-img"
                       loading="lazy"
                     />
+                    <div className="project-thumb-overlay">
+                      <span className="project-overlay-badge">View Architecture Details &rarr;</span>
+                    </div>
                   </div>
 
-                  <div className="case-info">
-                    <div className="case-category">{project.category}</div>
-                    <h3 className="case-title">{project.title}</h3>
-                    <p className="case-description">{project.description}</p>
+                  <div className="project-card-content">
+                    <h3
+                      className="project-card-title"
+                      onClick={() => setActiveProjectModal(project.id)}
+                      role="button"
+                      tabIndex={0}
+                      onKeyDown={(e) => e.key === "Enter" && setActiveProjectModal(project.id)}
+                    >
+                      {project.title}
+                    </h3>
+                    <p className="project-card-desc">{project.description}</p>
 
-                    <div className="case-metrics-grid">
-                      <div>
-                        <div className="case-metric-val">{project.metricA.val}</div>
-                        <div className="case-metric-lbl">{project.metricA.lbl}</div>
-                      </div>
-                      <div>
-                        <div className="case-metric-val">{project.metricB.val}</div>
-                        <div className="case-metric-lbl">{project.metricB.lbl}</div>
-                      </div>
+                    <div className="project-card-tags">
+                      {project.tags.map((tag) => (
+                        <span key={tag} className="project-card-tag">
+                          {tag}
+                        </span>
+                      ))}
                     </div>
 
-                    <ul className="case-tech-list">
-                      {project.stack.map((tech) => (
-                        <li key={tech} className="case-tech-pill">
-                          {tech}
-                        </li>
-                      ))}
-                    </ul>
-
-                    <div>
-                      <a href="#recruiter-terminal" className="btn-ghost">
-                        Request System Architecture Diagram &rarr;
+                    <div className="project-btn-row">
+                      <a
+                        href={project.liveDemo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-btn-action project-btn-live"
+                        aria-label={`Live Demo for ${project.title}`}
+                      >
+                        <svg
+                          width="15"
+                          height="15"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          aria-hidden="true"
+                        >
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                          <polyline points="15 3 21 3 21 9" />
+                          <line x1="10" y1="14" x2="21" y2="3" />
+                        </svg>
+                        Live Demo
+                      </a>
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-btn-action project-btn-gh"
+                        aria-label={`GitHub Repository for ${project.title}`}
+                      >
+                        <svg
+                          width="15"
+                          height="15"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          aria-hidden="true"
+                        >
+                          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                        </svg>
+                        GitHub
                       </a>
                     </div>
                   </div>
-                </article>
+                </div>
               ))}
             </div>
           </div>
@@ -1107,6 +1196,19 @@ export default function PortfolioPage() {
         {activeExpModal === "netcompany" && <NetcompanyDetail />}
         {activeExpModal === "previous" && <PreviousJobDetail />}
       </ExperienceModal>
+
+      {/* Project Details Modal rendering dedicated TSX file for each project */}
+      <ProjectDetailModal
+        isOpen={activeProjectModal !== null}
+        onClose={() => setActiveProjectModal(null)}
+      >
+        {activeProjectModal === "amplio" && <Project1Detail />}
+        {activeProjectModal === "cinestream" && <Project2Detail />}
+        {activeProjectModal === "kestrel" && <Project3Detail />}
+        {activeProjectModal === "cloudvault" && <Project4Detail />}
+        {activeProjectModal === "devnexus" && <Project5Detail />}
+        {activeProjectModal === "algoarena" && <Project6Detail />}
+      </ProjectDetailModal>
     </div>
   );
 }
