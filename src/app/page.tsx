@@ -95,13 +95,13 @@ export default function PortfolioPage() {
   const featuredProjects: FeaturedProject[] = [
     {
       id: "amplio",
-      title: "Amplio: Enterprise Financial & Tax Platform",
+      title: "Distributed and Multi-level Caching System",
       description:
-        "Enterprise financial, tax computation, and lending management platform with microservices, Redis caching, and real-time Kafka event streaming.",
-      image: "/images/distributed-system.jpg",
-      tags: ["Java", "Spring Boot", "Kafka", "PostgreSQL", "Redis", "Docker"],
+        "An event-driven multi-tier caching system (L1 Caffeine + L2 Redis) with Redisson locking, Debezium CDC synchronization, and observability.",
+      image: "/images/multi-level-cache-thumbnail.png",
+      tags: ["Java", "Spring Boot", "Kafka", "Debezium", "PostgreSQL", "Redisson", "Caffeine", "Docker", "Prometheus", "Grafana", "Tempo", "Logstash"],
       liveDemo: "https://github.com/HemlockPham7",
-      github: "https://github.com/HemlockPham7",
+      github: "https://github.com/HemlockPham7/evaluate-advanced-concept",
     },
     {
       id: "cinestream",

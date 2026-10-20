@@ -7,56 +7,41 @@ export default function Project1Detail() {
   return (
     <div className="project-detail-body">
       <div className="project-detail-header">
-        <span className="project-detail-badge">Enterprise Financial Platform</span>
-        <h2 className="project-detail-title">Amplio: Enterprise Financial & Tax Platform</h2>
+        <span className="project-detail-badge">Advanced Concept</span>
+        <h2 className="project-detail-title">Multi-level Caching System</h2>
         <p className="project-detail-subtitle">
-          Core banking, lending, and tax management platform handling 10,000+ QPS with sub-200ms query latency across 500K+ records.
+          An enterprise-grade, event-driven multi-tier caching architecture (L1 Caffeine + L2 Redis) built with Spring Boot, featuring Redisson distributed locking to prevent cache stampede, Debezium CDC & Kafka for near real-time cache synchronization, and full-stack observability via Prometheus, Grafana, Tempo, and Logstash.
         </p>
-      </div>
-
-      <div className="project-detail-banner">
-        <Image
-          src="/images/distributed-system.jpg"
-          alt="Amplio platform architecture"
-          width={800}
-          height={450}
-          className="project-banner-img"
-        />
-      </div>
-
-      <div className="project-detail-banner">
-        <Image
-          src="/images/distributed-system.jpg"
-          alt="Amplio platform architecture"
-          width={800}
-          height={450}
-          className="project-banner-img"
-        />
       </div>
 
       <div className="project-detail-section">
-        <h4 className="detail-section-heading">System Overview & Architecture</h4>
-        <p>
-          Amplio is an enterprise-scale financial solution designed for high-throughput tax calculation, loan management, and banking transactions.
-          To handle high concurrency while guaranteeing data consistency, the backend leverages Spring Boot microservices integrated with an
-          event-driven architecture using Apache Kafka, Debezium Change Data Capture (CDC), and Elasticsearch.
-        </p>
+        <h4 className="detail-section-heading">Overall Architecture</h4>
+      </div>
+
+      <div className="project-detail-banner">
+        <Image
+          src="/images/multi-level-cache-architecture.png"
+          alt="Multi-level cache architecture"
+          width={1836}
+          height={1836}
+          className="project-banner-img"
+        />
       </div>
 
       <div className="project-detail-section">
         <h4 className="detail-section-heading">Key Engineering Highlights</h4>
         <ul className="project-detail-bullets">
           <li>
-            <strong>Event-Driven Search Ingestion:</strong> Built Elasticsearch search pipelines using the Outbox Pattern and Debezium CDC via Kafka, achieving consistent sub-200ms response times across 500,000+ metadata records.
+            <strong>Multi-Tier Caching & Stampede Prevention:</strong> Architected a high-throughput L1 (Caffeine) / L2 (Redis) caching topology backed by Redisson distributed locks to completely mitigate cache stampede under heavy cache-miss bursts.
           </li>
           <li>
-            <strong>Multi-Tier Caching Strategy:</strong> Engineered a two-level caching topology combining Redis and Caffeine, sustaining 10,000 QPS with a 436ms P95 latency ceiling under peak bursts.
+            <strong>CDC-Driven Cache Invalidation:</strong> Built an event-driven invalidation pipeline leveraging Debezium CDC and Kafka; synchronized state across nodes by invalidating L2 Redis and broadcasting eviction events via Redis Pub/Sub to all L1 Caffeine instances.
           </li>
           <li>
-            <strong>Bulk Query Optimization:</strong> Refactored 10+ complex relational database queries into batched operations in PostgreSQL, reducing database saturation by 40%.
+            <strong>Observability:</strong> Integrated Prometheus, Grafana, and Grafana Tempo for end-to-end distributed tracing and real-time metric tracking, pinpointing latency bottlenecks across cache tiers.
           </li>
           <li>
-            <strong>Zero-Downtime Deployment:</strong> Implemented CI/CD workflows for automated repository sync, decreasing document-view downtime from 20 minutes to under 1 second.
+            <strong>Centralized Logging:</strong> Deployed Logstash to aggregate, normalize, and ship structured logs across multi-instance services, streamlining distributed troubleshooting and operational audits.
           </li>
         </ul>
       </div>
@@ -68,12 +53,14 @@ export default function Project1Detail() {
           <span>Spring Boot</span>
           <span>Kafka</span>
           <span>Debezium</span>
-          <span>Elasticsearch</span>
-          <span>Redis</span>
+          <span>Redisson</span>
           <span>Caffeine</span>
           <span>PostgreSQL</span>
           <span>Docker</span>
-          <span>CI/CD</span>
+          <span>Prometheus</span>
+          <span>Grafana</span>
+          <span>Tempo</span>
+          <span>Logstash</span>
         </div>
       </div>
 
@@ -87,7 +74,7 @@ export default function Project1Detail() {
           Live Demo Platform
         </a>
         <a
-          href="https://github.com/HemlockPham7/amplio-platform"
+          href="https://github.com/HemlockPham7/evaluate-advanced-concept"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-secondary"
