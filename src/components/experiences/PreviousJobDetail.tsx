@@ -35,6 +35,9 @@ export default function PreviousJobDetail() {
           <li>
             <strong>API Documentation & Development Workflow:</strong> Documented RESTful APIs using <strong>Swagger</strong> and worked with <strong>Docker</strong> to support a consistent development environment and service integration.
           </li>
+          <li>
+            <strong>API Gateway & Authentication:</strong> Designed an API Gateway with <strong>Keycloak integration</strong> for centralized request routing and authentication.
+          </li>
         </ul>
       </div>
 

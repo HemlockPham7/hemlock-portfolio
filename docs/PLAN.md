@@ -69,6 +69,7 @@ Refactor the Hero section to present an approachable, authoritative developer id
     - **Gmail / Email:** Direct mail action (`mailto:...`) with tooltips or clipboard copy functionality.
     - **GitHub:** Clickable icon redirecting to GitHub profile (`target="_blank"`, `rel="noopener noreferrer"`).
   - Provide smooth hover micro-animations, tooltips, and high-contrast accessibility tags (`aria-label`).
+  - Scaled up the "Connect me through" section and buttons by ~40% (larger fonts, enhanced padding, 25px SVG vector icons, expanded tap targets).
 - [x] **Headline & Copy Refinement:**
   - Clear introduction: Junior Software Developer / Software Engineer with 1.5+ years of experience.
 

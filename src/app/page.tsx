@@ -11,7 +11,6 @@ import Project2Detail from "@/components/projects/details/Project2Detail";
 import Project3Detail from "@/components/projects/details/Project3Detail";
 import Project4Detail from "@/components/projects/details/Project4Detail";
 import Project5Detail from "@/components/projects/details/Project5Detail";
-import Project6Detail from "@/components/projects/details/Project6Detail";
 import SkillsSection from "@/components/skills/SkillsSection";
 
 interface FeaturedProject {
@@ -144,16 +143,6 @@ export default function PortfolioPage() {
       liveDemo: "https://github.com/HemlockPham7",
       github: "https://github.com/HemlockPham7",
     },
-    {
-      id: "algoarena",
-      title: "AlgoArena: Real-Time Algorithmic Judge System",
-      description:
-        "Interactive algorithmic competitive programming sandbox with isolated Docker execution containers, strict memory/CPU limits, and sub-second evaluation.",
-      image: "/images/code-judge.jpg",
-      tags: ["Go", "Docker Sandbox", "WebSocket", "React", "Next.js", "Redis"],
-      liveDemo: "https://github.com/HemlockPham7",
-      github: "https://github.com/HemlockPham7",
-    },
   ];
 
   const awardPrizes: AwardItem[] = [
@@ -188,7 +177,7 @@ export default function PortfolioPage() {
       date: "2019-2020",
       description:
         "Awarded First Prize in the Ho Chi Minh City Informatics Competition for Gifted Students, a city-level programming competition for high school students, representing High School for the Gifted (PTNK).",
-      tags: ["HCM City", "First Prize", "Competitive Programming", "PTNK"],
+      tags: ["HCMC", "First Prize", "Competitive Programming", "PTNK"],
     },
   ];
 
@@ -298,8 +287,8 @@ export default function PortfolioPage() {
                       aria-label="Connect with Viet-Hoang Pham on LinkedIn"
                     >
                       <svg
-                        width="18"
-                        height="18"
+                        width="25"
+                        height="25"
                         viewBox="0 0 24 24"
                         fill="currentColor"
                         aria-hidden="true"
@@ -315,8 +304,8 @@ export default function PortfolioPage() {
                       aria-label="Send email to Viet-Hoang Pham via Gmail"
                     >
                       <svg
-                        width="18"
-                        height="18"
+                        width="25"
+                        height="25"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -339,8 +328,8 @@ export default function PortfolioPage() {
                       aria-label="View Viet-Hoang Pham on GitHub"
                     >
                       <svg
-                        width="18"
-                        height="18"
+                        width="25"
+                        height="25"
                         viewBox="0 0 24 24"
                         fill="currentColor"
                         aria-hidden="true"
@@ -356,7 +345,7 @@ export default function PortfolioPage() {
               <div className="hero-media-card">
                 <div className="hero-portrait-frame">
                   <Image
-                    src="/images/developer-portrait.jpg"
+                    src="/images/portrait.jpg"
                     alt="Viet-Hoang Pham portrait"
                     width={600}
                     height={600}
@@ -382,30 +371,22 @@ export default function PortfolioPage() {
             <div className="about-grid">
               <div className="about-card">
                 <h3 className="about-card-title">VNUHCM - University of Science</h3>
-                <div className="about-card-subtitle">Bachelor of Science in Information Technology (APCS)</div>
+                <div className="about-card-subtitle">Bachelor of Science in Information Technology (HCMUS)</div>
                 <p className="about-card-text">
                   Graduated with a solid academic foundation in algorithm design, data structures, distributed computing, database management, and object-oriented software architecture. Actively participated in academic research and competitive programming.
                 </p>
-                <div className="about-highlights-list">
-                  <div className="about-highlight-item">
-                    <div className="about-highlight-icon">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                        <polyline points="20 6 9 17 4 12" />
-                      </svg>
-                    </div>
-                    <div>
-                      <strong>Core Specialization:</strong> High-throughput backend systems, resilient microservices, and reliable cloud-ready APIs.
-                    </div>
+                <div className="about-stats-grid">
+                  <div className="about-stat-box">
+                    <div className="about-stat-val">8.20 / 10</div>
+                    <div className="about-stat-lbl">GPA</div>
                   </div>
-                  <div className="about-highlight-item">
-                    <div className="about-highlight-icon">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                        <polyline points="20 6 9 17 4 12" />
-                      </svg>
-                    </div>
-                    <div>
-                      <strong>Engineering Mindset:</strong> Clean code advocate, automated testing enthusiast, and pragmatic system optimizer.
-                    </div>
+                  <div className="about-stat-box">
+                    <div className="about-stat-val">7.0 Overall</div>
+                    <div className="about-stat-lbl">IELTS (7.5 in Speaking)</div>
+                  </div>
+                  <div className="about-stat-box">
+                    <div className="about-stat-val">APCS</div>
+                    <div className="about-stat-lbl">Advanced Program in Computer Science</div>
                   </div>
                 </div>
               </div>
@@ -753,7 +734,6 @@ export default function PortfolioPage() {
         {activeProjectModal === "kestrel" && <Project3Detail />}
         {activeProjectModal === "cloudvault" && <Project4Detail />}
         {activeProjectModal === "devnexus" && <Project5Detail />}
-        {activeProjectModal === "algoarena" && <Project6Detail />}
       </ProjectDetailModal>
     </div>
   );

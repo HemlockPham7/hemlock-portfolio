@@ -24,11 +24,21 @@ export default function Project1Detail() {
         />
       </div>
 
+      <div className="project-detail-banner">
+        <Image
+          src="/images/distributed-system.jpg"
+          alt="Amplio platform architecture"
+          width={800}
+          height={450}
+          className="project-banner-img"
+        />
+      </div>
+
       <div className="project-detail-section">
         <h4 className="detail-section-heading">System Overview & Architecture</h4>
         <p>
-          Amplio is an enterprise-scale financial solution designed for high-throughput tax calculation, loan management, and banking transactions. 
-          To handle high concurrency while guaranteeing data consistency, the backend leverages Spring Boot microservices integrated with an 
+          Amplio is an enterprise-scale financial solution designed for high-throughput tax calculation, loan management, and banking transactions.
+          To handle high concurrency while guaranteeing data consistency, the backend leverages Spring Boot microservices integrated with an
           event-driven architecture using Apache Kafka, Debezium Change Data Capture (CDC), and Elasticsearch.
         </p>
       </div>
