@@ -166,10 +166,19 @@ Build a comprehensive 5-project showcase in a structured grid layout, backed by 
   - Detail components cover: Architecture overview, key engineering highlights, tech stack chips, and live demo / GitHub links.
   - Accessible modal dialog component `src/components/projects/ProjectDetailModal.tsx` with ESC key listener, background scroll lock, and responsive mobile styling.
 
+- [x] **Project Detail Modal Width & Non-Cropping Responsive Images:**
+  - Expanded project detail modal width by ~10% (`max-width: 900px`, up from 820px) to provide enhanced breathing room for detailed architecture content and diagrams.
+  - Eliminated image cropping: removed fixed `aspect-ratio: 16 / 9` and `object-fit: cover` from `.project-banner-img`.
+  - Configured responsive scaling with `width: 100%`, `height: auto`, and `object-fit: contain` so images scale dynamically while rendering 100% of their vertical content.
+  - Added support for 100% height rendering (`.fit-height` / `.full-height` utility modifiers).
+  - Aligned diagram dimensions in `src/components/projects/details/Project4Detail.tsx` (`architecture.png` to 1221x930 and `saga-flow.png` to 1836x778) to preserve natural aspect ratios.
+
 #### Acceptance Criteria
 - Exactly 5 project cards rendered cleanly in a uniform grid.
 - Each card contains thumbnail, title, summary, tech stack tags, and functional action buttons.
 - Each project links to its dedicated TSX view for exhaustive exploration.
+- Project detail modal renders ~10% wider on desktop.
+- Architecture and flow images render completely without being cropped on top, bottom, or sides.
 
 ---
 

@@ -7,42 +7,53 @@ export default function Project4Detail() {
   return (
     <div className="project-detail-body">
       <div className="project-detail-header">
-        <span className="project-detail-badge">Cloud Object Storage</span>
-        <h2 className="project-detail-title">CloudVault: S3 Cloud-Native Ingestion Pipeline</h2>
+        <span className="project-detail-badge">Saga Pattern Orchestration</span>
+        <h2 className="project-detail-title">Payment System</h2>
         <p className="project-detail-subtitle">
-          Automated batch data migration and object lifecycle service transferring heavy binary data to Amazon S3 with presigned access controls.
+          Integrate VNPay to demonstrate a movie ticket purchasing flow, including movie selection, seat reservation, payment processing, and ticket confirmation. Apply the Saga Pattern to coordinate distributed transactions across services and ensure data consistency through compensating actions when a step fails. Implement idempotency to prevent duplicate payment requests, duplicate ticket bookings, and inconsistent transaction states when requests are retried or payment callbacks are received multiple times.
         </p>
+      </div>
+
+      <div className="project-detail-section">
+        <h4 className="detail-section-heading">Overall Architecture</h4>
       </div>
 
       <div className="project-detail-banner">
         <Image
-          src="/images/cloud-storage.jpg"
-          alt="CloudVault S3 storage pipeline"
-          width={800}
-          height={450}
+          src="/images/architecture.png"
+          alt="Overall architecture"
+          width={1221}
+          height={930}
           className="project-banner-img"
         />
       </div>
 
       <div className="project-detail-section">
-        <h4 className="detail-section-heading">System Overview & Architecture</h4>
-        <p>
-          CloudVault was engineered to offload high-volume media storage and workflow documents from primary relational databases into Amazon S3. 
-          By executing scheduled batch workers with chunked streaming and validating content integrity, the platform reduced database storage footprints while accelerating client access times.
-        </p>
+        <h4 className="detail-section-heading">Saga Flow</h4>
       </div>
+
+      <div className="project-detail-banner">
+        <Image
+          src="/images/saga-flow.png"
+          alt="Saga Pattern Orchestration Flow"
+          width={1836}
+          height={778}
+          className="project-banner-img"
+        />
+      </div>
+
 
       <div className="project-detail-section">
         <h4 className="detail-section-heading">Key Engineering Highlights</h4>
         <ul className="project-detail-bullets">
           <li>
-            <strong>Automated Batch Migration:</strong> Developed scheduled Spring Batch workers migrating nearly 1,000 images and documents associated with completed workflows to Amazon S3.
+            <strong>Distributed Transaction Management:</strong> Implemented distributed transaction workflows using the Saga Pattern and Axon Framework, ensuring reliable transaction coordination across microservices.
           </li>
           <li>
-            <strong>Presigned URL Security:</strong> Implemented time-expiring AWS S3 presigned URLs for direct secure client downloads, completely eliminating web server memory exhaustion.
+            <strong>Idempotency and Reliability:</strong> Implemented idempotency mechanisms to prevent duplicate processing and maintain consistent transaction handling across services.
           </li>
           <li>
-            <strong>Storage Cost Optimization:</strong> Implemented S3 Glacier transition lifecycle policies that cut persistent storage expenses by over 60%.
+            <strong>Microservices Architecture & Payment Integration:</strong> Designed and developed a Spring Boot-based microservices platform covering payment processing, order management, movie management, and VNPay payment gateway integration.
           </li>
         </ul>
       </div>
@@ -50,19 +61,17 @@ export default function Project4Detail() {
       <div className="project-detail-section">
         <h4 className="detail-section-heading">Tech Stack & Tools</h4>
         <div className="project-tech-chips">
-          <span>AWS S3</span>
           <span>Spring Boot</span>
-          <span>Java</span>
-          <span>Spring Batch</span>
-          <span>PostgreSQL</span>
+          <span>Axon Framework</span>
+          <span>Saga Pattern</span>
+          <span>Idempotency</span>
           <span>Docker</span>
-          <span>AWS IAM</span>
         </div>
       </div>
 
       <div className="project-detail-actions">
         <a
-          href="https://cloudvault.hemlock.dev"
+          href="https://www.youtube.com/watch?v=xNqM4SotZoY"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-primary"
@@ -70,7 +79,7 @@ export default function Project4Detail() {
           Live Demo Platform
         </a>
         <a
-          href="https://github.com/HemlockPham7/cloudvault-s3"
+          href="https://github.com/HemlockPham7/payment-system"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-secondary"
