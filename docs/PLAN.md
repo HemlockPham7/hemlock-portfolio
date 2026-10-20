@@ -179,29 +179,29 @@ Build a comprehensive 6-project showcase in a structured grid layout, backed by 
 Provide a comprehensive, visually engaging technical skills section organized into 5 clearly demarcated horizontal categories.
 
 #### Key Tasks
-- [ ] **Categorization Structure (5 Dedicated Rows):**
+- [x] **Categorization Structure (5 Dedicated Rows):**
   1. **Row 1 - Programming Languages:**
-     - e.g., Java, TypeScript, JavaScript, Python, C++, SQL.
+     - Java, TypeScript, JavaScript, Python, C++, SQL.
   2. **Row 2 - Frameworks & Core Skills:**
-     - e.g., Spring Boot, Next.js, React, Node.js, Express, RESTful APIs, OOP.
+     - Spring Boot, Next.js, React, Node.js, Express, RESTful APIs, OOP & System Design.
   3. **Row 3 - Databases, Caching & Cloud:**
-     - e.g., PostgreSQL, MySQL, Redis, MongoDB, AWS S3, Cloudflare, Supabase.
+     - PostgreSQL, MySQL, Redis, MongoDB, AWS S3, Cloudflare, Supabase.
   4. **Row 4 - DevOps & Monitoring:**
-     - e.g., Docker, Kubernetes, CI/CD, GitHub Actions, Prometheus, Grafana, Linux.
+     - Docker, Kubernetes, CI/CD, GitHub Actions, Prometheus, Grafana, Linux.
   5. **Row 5 - AI & Productivity Tools:**
-     - e.g., Cursor, Claude, OpenAI API, Ollama, LangChain, GitHub Copilot.
-- [ ] **Card Anatomy for Each Skill:**
+     - Cursor, Claude, OpenAI API, Ollama, LangChain, GitHub Copilot.
+- [x] **Card Anatomy for Each Skill:**
   - Individual compact item card containing:
-    - Scalable vector icon (SVG) centered at the top.
-    - Official skill/technology name centered below.
-  - Micro-interactions: Subtle lift (`transform: translateY(-3px)`), gentle border glow, and tooltip on hover.
-- [ ] **Responsive Flow:**
-  - Flex/Grid wrap configuration ensuring clean alignment on all viewport widths without icon distortion.
+    - Scalable vector icon (SVG) centered at the top with responsive dimensions.
+    - Official skill/technology name centered below with clean contrast.
+  - Micro-interactions: Smooth vertical lift (`transform: translateY(-4px)`), illuminated primary border glow, drop shadow, and icon scale pop on hover/focus.
+- [x] **Responsive Flow:**
+  - Clean responsive grid layout (`repeat(auto-fill, minmax(135px, 1fr))`) ensuring uniform spacing and zero icon distortion across desktop, tablet, and mobile.
 
 #### Acceptance Criteria
-- 5 distinct category rows clearly labeled and structured.
-- Every skill card displays a crisp icon above its label.
-- High visual appeal with consistent padding, typography, and hover feedback.
+- 5 distinct category rows clearly labeled with badges, titles, and descriptions.
+- Every skill card displays a crisp SVG icon above its label.
+- High visual appeal with consistent padding, typography, and interactive hover feedback.
 
 ---
 
@@ -213,7 +213,7 @@ Provide a comprehensive, visually engaging technical skills section organized in
 | **M2** | Phase 2 (About) | **Completed** | `src/app/page.tsx`, `src/app/globals.css` | Review HCMUS degree text, 1.5+ yrs bio, 3 award cards layout |
 | **M3** | Phase 3 (Experiences) | **Completed** | `src/components/experiences/*`, `src/app/page.tsx`, `src/app/globals.css` | Verify central timeline, alternating cards, detail click handler |
 | **M4** | Phase 4 (Projects) | **Completed** | `src/components/projects/*`, 6 detail TSX views | Verify 6-card grid, Live/GitHub buttons, 6 detail pages |
-| **M5** | Phase 5 (Skills) | Pending | `src/components/skills/*`, skill icons | Verify 5 categorized rows, icon + label alignment, hover states |
+| **M5** | Phase 5 (Skills) | **Completed** | `src/components/skills/*`, `src/app/page.tsx`, `src/app/globals.css` | Verify 5 categorized rows, icon + label alignment, hover states |
 
 ---
 
