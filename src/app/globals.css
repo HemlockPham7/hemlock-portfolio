@@ -80,24 +80,24 @@ body.portfolio-body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 78px;
+  height: 94px;
 }
 
 .wordmark {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--text-main);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .wordmark-badge {
   display: inline-block;
-  padding: 4px 10px;
-  font-size: 0.85rem;
+  padding: 5px 12px;
+  font-size: 0.95rem;
   font-weight: 600;
   color: var(--primary);
   background-color: var(--surface-tint);
@@ -107,12 +107,12 @@ body.portfolio-body {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 2.1rem;
+  gap: 2.5rem;
   list-style: none;
 }
 
 .nav-links a {
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   font-weight: 500;
   color: var(--text-muted);
   text-decoration: none;
@@ -1037,72 +1037,309 @@ body.portfolio-body {
   color: var(--text-muted);
 }
 
-/* SECTION 5: CAREER TRAJECTORY (Layout Family E: Chronological Milestone Track) */
-.timeline-track {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+/* SECTION 3: WORK EXPERIENCES (Alternating Middle-Line Timeline) */
+.timeline-container {
   position: relative;
-  padding-left: 1.5rem;
-  border-left: 2px solid var(--border-medium);
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 0;
 }
 
-.timeline-item {
+.timeline-middle-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  background: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 100%);
+  transform: translateX(-50%);
+  z-index: 1;
+  border-radius: var(--radius-full);
+}
+
+.timeline-block {
   position: relative;
+  display: flex;
+  width: 100%;
+  margin-bottom: 4rem;
+  z-index: 2;
+}
+
+.timeline-block:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-block.left {
+  justify-content: flex-start;
+}
+
+.timeline-block.right {
+  justify-content: flex-end;
+}
+
+.timeline-center-pin {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--surface-container-lowest);
+  border: 3.5px solid var(--primary);
+  box-shadow: 0 0 0 4px var(--surface-tint);
+  z-index: 3;
+  transition: all 200ms ease;
+}
+
+.timeline-block:hover .timeline-center-pin {
+  transform: translate(-50%, -50%) scale(1.25);
+  box-shadow: 0 0 0 8px rgba(79, 70, 229, 0.2);
+  background-color: var(--primary);
+}
+
+.timeline-card-box {
+  width: 44%;
   background-color: var(--surface-container-lowest);
   border: 1px solid var(--border-quiet);
   border-radius: var(--radius-lg);
   padding: 2rem;
-}
-
-.timeline-dot {
-  position: absolute;
-  left: calc(-1.5rem - 7px);
-  top: 2rem;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: var(--primary);
-  border: 2px solid var(--white);
-}
-
-.timeline-header-line {
+  cursor: pointer;
+  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 200ms ease, border-color 200ms ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 8px;
-  margin-bottom: 0.75rem;
+  flex-direction: column;
+  position: relative;
 }
 
-.timeline-company-role {
-  font-size: 1.25rem;
+.timeline-card-box:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+  box-shadow: 0 14px 30px rgba(79, 70, 229, 0.12);
+}
+
+.timeline-period-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.825rem;
   font-weight: 700;
+  color: var(--primary);
+  background-color: var(--surface-tint);
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  width: fit-content;
+  margin-bottom: 0.85rem;
+}
+
+.timeline-job-role {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
   color: var(--text-main);
+  margin-bottom: 0.35rem;
 }
 
-.timeline-period {
-  font-size: 0.875rem;
+.timeline-job-company {
+  font-size: 1.05rem;
   font-weight: 600;
-  color: var(--secondary);
-}
-
-.timeline-scope {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  line-height: 1.5;
+  color: var(--primary);
   margin-bottom: 1rem;
 }
 
-.timeline-outcomes {
-  list-style: square;
-  margin-left: 1.25rem;
+.timeline-job-summary {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.timeline-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.timeline-tag-item {
+  font-size: 0.775rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  background-color: var(--surface-container-low);
+  color: var(--text-main);
+  border: 1px solid var(--border-quiet);
+}
+
+.timeline-view-detail-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-top: auto;
+  transition: gap 150ms ease;
+}
+
+.timeline-card-box:hover .timeline-view-detail-btn {
+  gap: 10px;
+}
+
+/* Experience Detail Modal */
+.exp-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: fadeInModal 180ms ease forwards;
+}
+
+@keyframes fadeInModal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.exp-modal-dialog {
+  background-color: var(--surface-container-lowest);
+  border: 1px solid var(--border-quiet);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 680px;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 2.25rem;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.16);
+  animation: slideUpModal 220ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideUpModal {
+  from { transform: translateY(20px) scale(0.98); opacity: 0; }
+  to { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+.exp-modal-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: var(--surface-container-low);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: all 150ms ease;
+}
+
+.exp-modal-close:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.job-detail-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: var(--primary);
+  background-color: var(--surface-tint);
+  border-radius: var(--radius-full);
+  margin-bottom: 0.75rem;
+}
+
+.job-detail-title {
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.25;
+  margin-bottom: 0.35rem;
+}
+
+.job-detail-company {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.job-detail-summary-card {
+  padding: 1.25rem;
+  background-color: var(--surface-container-low);
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 1.75rem;
+  border: 1px solid var(--border-quiet);
+}
+
+.job-section-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.85rem;
+  border-left: 3px solid var(--primary);
+  padding-left: 10px;
+}
+
+.job-bullet-list {
+  list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  font-size: 0.9rem;
+  gap: 0.85rem;
+  margin-bottom: 1.75rem;
+}
+
+.job-bullet-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.925rem;
+  line-height: 1.6;
   color: var(--text-muted);
-  line-height: 1.45;
+}
+
+.job-bullet-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-size: 1.5rem;
+  line-height: 1;
+  top: -1px;
+}
+
+.job-bullet-list li strong {
+  color: var(--text-main);
+}
+
+.job-tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.job-tech-tag {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  background-color: var(--surface-container-low);
+  color: var(--text-main);
+  border: 1px solid var(--border-quiet);
 }
 
 /* SECTION 6: TECHNICAL ARSENAL (Layout Family F: Multi-Column Domain Matrix) */
@@ -1424,6 +1661,21 @@ body.portfolio-body {
   }
   .awards-grid {
     grid-template-columns: 1fr;
+  }
+  .timeline-middle-line {
+    left: 20px;
+    transform: none;
+  }
+  .timeline-center-pin {
+    left: 20px;
+    transform: translate(-50%, -50%);
+  }
+  .timeline-block {
+    justify-content: flex-start !important;
+  }
+  .timeline-card-box {
+    width: calc(100% - 45px);
+    margin-left: 45px;
   }
   .ledger-grid {
     grid-template-columns: 1fr;

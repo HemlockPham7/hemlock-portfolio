@@ -111,24 +111,25 @@ Highlight educational credentials, foundational software engineering background,
 Showcase professional career progression using a centralized vertical timeline with alternating left/right layout and dedicated detailed view components.
 
 #### Key Tasks
-- [ ] **Timeline Architecture & Structure:**
-  - Implement a central vertical timeline spine (`timeline-axis`).
+- [x] **Timeline Architecture & Structure:**
+  - Implement a central vertical timeline spine (`timeline-axis` / `timeline-middle-line`).
   - Render 2 distinct job experience items in an alternating zigzag pattern:
     - Job 1: Positioned on the left side of the axis.
     - Job 2: Positioned on the right side of the axis (offset vertically, not sharing the same row).
     - Mobile layout: Gracefully collapses to a single left-aligned timeline spine for screens under 768px.
-- [ ] **Job Card Information Density:**
+- [x] **Job Card Information Density:**
   - **Date Range:** e.g., *Feb 2025 – Feb 2026* (or current dates).
   - **Job Title:** *Junior Software Developer*.
   - **Company Name:** *Netcompany* (and previous/current company).
   - **Brief Summary:** Highlighting core contributions, production deliverables, and system ownership.
   - **Skill Badges:** Explicit tags including `Spring Boot`, `AWS S3`, `Microservices`, etc.
-- [ ] **Interactive Deep-Dive View:**
+- [x] **Interactive Deep-Dive View:**
   - Each job card includes an interactive affordance ("View Details" or clickable card).
-  - Create dedicated TSX file/modal components (e.g., `ExperienceDetailModal.tsx` or discrete detail components per role) containing:
-    - In-depth architectural contributions.
-    - Challenges faced and technical solutions implemented.
-    - Team collaboration, CI/CD pipeline involvement, and quantifiable milestones.
+  - Created dedicated TSX file/modal components:
+    - `src/components/experiences/NetcompanyDetail.tsx`
+    - `src/components/experiences/PreviousJobDetail.tsx`
+    - `src/components/experiences/ExperienceModal.tsx`
+    - In-depth architectural contributions, challenges faced, team collaboration, and stack details.
 
 #### Acceptance Criteria
 - Two distinct job cards placed alternately on left and right sides of a central timeline bar on desktop.
@@ -209,7 +210,7 @@ Provide a comprehensive, visually engaging technical skills section organized in
 | :--- | :--- | :--- | :--- | :--- |
 | **M1** | Phase 1 (Hero) | **Completed** | `public/cv.pdf`, `src/app/page.tsx`, `src/app/globals.css` | Verify CV download, `#projects` jump, social icons clickability |
 | **M2** | Phase 2 (About) | **Completed** | `src/app/page.tsx`, `src/app/globals.css` | Review HCMUS degree text, 1.5+ yrs bio, 3 award cards layout |
-| **M3** | Phase 3 (Experiences) | Pending | `src/components/experiences/*`, detail TSX components | Verify central timeline, alternating cards, detail click handler |
+| **M3** | Phase 3 (Experiences) | **Completed** | `src/components/experiences/*`, `src/app/page.tsx`, `src/app/globals.css` | Verify central timeline, alternating cards, detail click handler |
 | **M4** | Phase 4 (Projects) | Pending | `src/components/projects/*`, 6 detail TSX views | Verify 6-card grid, Live/GitHub buttons, 6 detail pages |
 | **M5** | Phase 5 (Skills) | Pending | `src/components/skills/*`, skill icons | Verify 5 categorized rows, icon + label alignment, hover states |
 

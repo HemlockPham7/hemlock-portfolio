@@ -2,6 +2,9 @@
 
 import React, { useState, useMemo } from "react";
 import Image from "next/image";
+import NetcompanyDetail from "@/components/experiences/NetcompanyDetail";
+import PreviousJobDetail from "@/components/experiences/PreviousJobDetail";
+import ExperienceModal from "@/components/experiences/ExperienceModal";
 
 interface CaseStudy {
   id: string;
@@ -26,6 +29,9 @@ interface AwardItem {
 }
 
 export default function PortfolioPage() {
+  // Experience Details Modal State
+  const [activeExpModal, setActiveExpModal] = useState<"netcompany" | "previous" | null>(null);
+
   // Section 4 Interactive Simulator State
   const [clusterNodes, setClusterNodes] = useState<number>(8);
   const [requestLoad, setRequestLoad] = useState<number>(45);
@@ -448,7 +454,105 @@ export default function PortfolioPage() {
           </div>
         </section>
 
-        {/* SECTION 3: FLAGSHIP PRODUCTION PROJECTS (Layout Family C: Alternating Case-Study Split) */}
+        {/* SECTION 3: WORK EXPERIENCES (Layout Family E: Alternating Central Timeline) */}
+        <section id="experience" className="portfolio-section">
+          <div className="site-container">
+            <div className="section-head">
+              <h2 className="section-title">Work Experiences</h2>
+              <p className="section-description">
+                1.5+ years of software development experience engineering scalable backend services, cloud storage integrations, and robust microservices.
+              </p>
+            </div>
+
+            <div className="timeline-container">
+              {/* Central Spine */}
+              <div className="timeline-middle-line" aria-hidden="true" />
+
+              {/* Job 1: Netcompany (Left side) */}
+              <div className="timeline-block left">
+                <div
+                  className="timeline-card-box"
+                  onClick={() => setActiveExpModal("netcompany")}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => e.key === "Enter" && setActiveExpModal("netcompany")}
+                  aria-label="View Netcompany experience details"
+                >
+                  <div className="timeline-period-badge">Feb 2025 – Feb 2026</div>
+                  <h3 className="timeline-job-role">Junior Software Developer</h3>
+                  <h4 className="timeline-job-company">Netcompany Group A/S</h4>
+                  <p className="timeline-job-summary">
+                    Built scalable backend services handling 10K QPS, implemented sub-200ms Elasticsearch queries across 500K+ records, optimized distributed caching and database performance, and automated AWS S3 storage pipelines, and streamlined CI/CD workflows.
+                  </p>
+                  <div className="timeline-tag-list">
+                    <span className="timeline-tag-item">Java</span>
+                    <span className="timeline-tag-item">Spring Boot</span>
+                    <span className="timeline-tag-item">React</span>
+                    <span className="timeline-tag-item">AWS S3</span>
+                    <span className="timeline-tag-item">Elasticsearch</span>
+                    <span className="timeline-tag-item">Debezium</span>
+                    <span className="timeline-tag-item">Kafka</span>
+                    <span className="timeline-tag-item">Redis</span>
+                    <span className="timeline-tag-item">Caffein</span>
+                    <span className="timeline-tag-item">PostgreSQL</span>
+                    <span className="timeline-tag-item">CI/CD</span>
+                  </div>
+                  <div className="timeline-view-detail-btn">
+                    <span>View Detailed Breakdown</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                      <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                  </div>
+                </div>
+                <div className="timeline-center-pin" aria-hidden="true" />
+              </div>
+
+              {/* Job 2: Software Developer (Right side, lower / offset) */}
+              <div className="timeline-block right">
+                <div
+                  className="timeline-card-box"
+                  onClick={() => setActiveExpModal("previous")}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => e.key === "Enter" && setActiveExpModal("previous")}
+                  aria-label="View previous Software Developer experience details"
+                >
+                  <div className="timeline-period-badge">Jan 2024 – Aug 2024</div>
+                  <h3 className="timeline-job-role">Intern Software Developer</h3>
+                  <h4 className="timeline-job-company">Payoo VietUnion Group - HCMUS Graduation</h4>
+                  <p className="timeline-job-summary">
+                    Developed Spring Boot microservices for movie ticket management, integrated VNPay payments, implemented Saga-based distributed transactions with idempotency, and enhanced database consistency and system observability.
+                  </p>
+                  <div className="timeline-tag-list">
+                    <span className="timeline-tag-item">Java</span>
+                    <span className="timeline-tag-item">Spring Boot</span>
+                    <span className="timeline-tag-item">React</span>
+                    <span className="timeline-tag-item">Axon Framework</span>
+                    <span className="timeline-tag-item">VNPAY</span>
+                    <span className="timeline-tag-item">Grafana</span>
+                    <span className="timeline-tag-item">Tempo</span>
+                    <span className="timeline-tag-item">Prometheous</span>
+                    <span className="timeline-tag-item">Logstash</span>
+                    <span className="timeline-tag-item">PostgreSQL</span>
+                    <span className="timeline-tag-item">Swagger</span>
+                    <span className="timeline-tag-item">Docker</span>
+                  </div>
+                  <div className="timeline-view-detail-btn">
+                    <span>View Detailed Breakdown</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                      <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                  </div>
+                </div>
+                <div className="timeline-center-pin" aria-hidden="true" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 4: FLAGSHIP PRODUCTION PROJECTS (Layout Family C: Alternating Case-Study Split) */}
         <section id="projects" className="portfolio-section">
           <div className="site-container">
             <div className="section-head">
@@ -645,90 +749,7 @@ export default function PortfolioPage() {
           </div>
         </section>
 
-        {/* SECTION 5: CAREER TRAJECTORY (Layout Family E: Chronological Milestone Track) */}
-        <section id="experience" className="portfolio-section">
-          <div className="site-container">
-            <div className="section-head">
-              <h2 className="section-title">Career Trajectory and Engineering Leadership</h2>
-              <p className="section-description">
-                Progressive track record of distributed systems ownership, technical strategy, and mentoring high-velocity engineering organizations.
-              </p>
-            </div>
-
-            <div className="timeline-track">
-              <div className="timeline-item">
-                <div className="timeline-dot"></div>
-                <div className="timeline-header-line">
-                  <h3 className="timeline-company-role">
-                    Staff Distributed Systems Architect at CloudMatrix Labs
-                  </h3>
-                  <span className="timeline-period">2024 to Present</span>
-                </div>
-                <p className="timeline-scope">
-                  Directing the core infrastructure and event platform serving 18 enterprise product lines and global multi-region deployments.
-                </p>
-                <ul className="timeline-outcomes">
-                  <li>
-                    Designed and deployed a unified gRPC event mesh that reduced inter-service network overhead by 42 percent.
-                  </li>
-                  <li>
-                    Mentored 16 senior backend engineers, establishing formal architectural decision record standards across the division.
-                  </li>
-                  <li>
-                    Led disaster recovery drills proving automated RPO under 10 seconds during full region blackout simulations.
-                  </li>
-                </ul>
-              </div>
-
-              <div className="timeline-item">
-                <div className="timeline-dot"></div>
-                <div className="timeline-header-line">
-                  <h3 className="timeline-company-role">
-                    Senior Backend Architect at FinTech Frontier
-                  </h3>
-                  <span className="timeline-period">2021 to 2024</span>
-                </div>
-                <p className="timeline-scope">
-                  Technical lead for high-frequency transactional ledger systems processing over 450 million dollars in monthly payment volumes.
-                </p>
-                <ul className="timeline-outcomes">
-                  <li>
-                    Migrated monolithic relational ledger to an event-sourced architecture with strict idempotency and zero balance drift.
-                  </li>
-                  <li>
-                    Implemented end-to-end distributed tracing using OpenTelemetry, shrinking mean time to detection for critical faults from 25 minutes to under 2 minutes.
-                  </li>
-                  <li>
-                    Collaborated with security teams to pass SOC2 Type II audits without a single architectural finding.
-                  </li>
-                </ul>
-              </div>
-
-              <div className="timeline-item">
-                <div className="timeline-dot"></div>
-                <div className="timeline-header-line">
-                  <h3 className="timeline-company-role">
-                    Infrastructure and Full Stack Engineer at Nexus Platform
-                  </h3>
-                  <span className="timeline-period">2018 to 2021</span>
-                </div>
-                <p className="timeline-scope">
-                  Developed internal developer tooling, automated CI/CD pipelines, and high-performance web client architectures.
-                </p>
-                <ul className="timeline-outcomes">
-                  <li>
-                    Spearheaded adoption of containerized microservices and automated deployment gates with canary rollback policies.
-                  </li>
-                  <li>
-                    Reduced frontend web application bundle sizes by 54 percent, elevating Core Web Vitals into the top tier.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* SECTION 6: TECHNICAL ARSENAL (Layout Family F: Multi-Column Domain Matrix) */}
+        {/* SECTION 5: TECHNICAL ARSENAL (Layout Family F: Multi-Column Domain Matrix) */}
         <section id="arsenal" className="portfolio-section section-tinted">
           <div className="site-container">
             <div className="section-head">
@@ -1063,7 +1084,10 @@ export default function PortfolioPage() {
               <a href="#hero">Back to Top</a>
             </li>
             <li>
-              <a href="#capabilities">Capabilities</a>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#experience">Experiences</a>
             </li>
             <li>
               <a href="#projects">Projects</a>
@@ -1074,6 +1098,15 @@ export default function PortfolioPage() {
           </ul>
         </div>
       </footer>
+
+      {/* Experience Details Modal rendering dedicated TSX file */}
+      <ExperienceModal
+        isOpen={activeExpModal !== null}
+        onClose={() => setActiveExpModal(null)}
+      >
+        {activeExpModal === "netcompany" && <NetcompanyDetail />}
+        {activeExpModal === "previous" && <PreviousJobDetail />}
+      </ExperienceModal>
     </div>
   );
 }
