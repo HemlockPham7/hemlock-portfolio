@@ -8,7 +8,7 @@ export default function Project1Detail() {
     <div className="project-detail-body">
       <div className="project-detail-header">
         <span className="project-detail-badge">Advanced Concept</span>
-        <h2 className="project-detail-title">Multi-level Caching System</h2>
+        <h2 className="project-detail-title">Distributed and Multi-level Caching System</h2>
         <p className="project-detail-subtitle">
           An enterprise-grade, event-driven multi-tier caching architecture (L1 Caffeine + L2 Redis) built with Spring Boot, featuring Redisson distributed locking to prevent cache stampede, Debezium CDC & Kafka for near real-time cache synchronization, and full-stack observability via Prometheus, Grafana, Tempo, and Logstash.
         </p>
@@ -21,6 +21,20 @@ export default function Project1Detail() {
       <div className="project-detail-banner">
         <Image
           src="/images/multi-level-cache-architecture.png"
+          alt="Multi-level cache architecture"
+          width={1836}
+          height={1836}
+          className="project-banner-img"
+        />
+      </div>
+
+      <div className="project-detail-section">
+        <h4 className="detail-section-heading">Distributed Caching and Refresh Ahead Method</h4>
+      </div>
+
+      <div className="project-detail-banner">
+        <Image
+          src="/images/distributed-refreshahead.png"
           alt="Multi-level cache architecture"
           width={1836}
           height={1836}
@@ -66,7 +80,7 @@ export default function Project1Detail() {
 
       <div className="project-detail-actions">
         <a
-          href="https://amplio-demo.hemlock.dev"
+          href="https://www.youtube.com/watch?v=FaJ3cvN6Fmc"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-primary"

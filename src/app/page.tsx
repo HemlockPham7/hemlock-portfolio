@@ -100,7 +100,7 @@ export default function PortfolioPage() {
         "An event-driven multi-tier caching system (L1 Caffeine + L2 Redis) with Redisson locking, Debezium CDC synchronization, and observability.",
       image: "/images/multi-level-cache-thumbnail.png",
       tags: ["Java", "Spring Boot", "Kafka", "Debezium", "PostgreSQL", "Redisson", "Caffeine", "Docker", "Prometheus", "Grafana", "Tempo", "Logstash"],
-      liveDemo: "https://github.com/HemlockPham7",
+      liveDemo: "https://www.youtube.com/watch?v=FaJ3cvN6Fmc",
       github: "https://github.com/HemlockPham7/evaluate-advanced-concept",
     },
     {
