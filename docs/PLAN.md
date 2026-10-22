@@ -192,7 +192,7 @@ Provide a comprehensive, visually engaging technical skills section organized in
   1. **Row 1 - Languages:**
      - Java, SQL, C++, Go, JavaScript, TypeScript, HTML, CSS.
   2. **Row 2 - Frameworks & Skills:**
-     - Spring Boot, Axon Framework, React, Kafka, Nginx, Swagger, HLS, VNPAY Payment Gateway.
+     - Spring Boot, Axon Framework, React, Kafka, API Gateway, Keycloak, Nginx, Swagger, HLS, VNPAY Payment Gateway.
   3. **Row 3 - Databases, Caching & Cloud:**
      - PostgreSQL, Redis, Caffeine, Amazon S3, CloudFront, Elasticsearch.
   4. **Row 4 - DevOps & Monitoring:**

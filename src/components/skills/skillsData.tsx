@@ -180,6 +180,37 @@ export const skillCategories: SkillCategory[] = [
         ),
       },
       {
+        id: "api-gateway",
+        name: "API Gateway",
+        category: "Frameworks & Skills",
+        icon: (
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <rect x="8" y="4" width="8" height="16" rx="2" />
+            <path d="M3 12h5" />
+            <path d="M5.5 9.5L8 12l-2.5 2.5" />
+            <path d="M16 8h3a2 2 0 0 1 2 2" />
+            <path d="M16 12h5" />
+            <path d="M16 16h3a2 2 0 0 0 2-2" />
+            <circle cx="12" cy="8.5" r="1" fill="currentColor" />
+            <circle cx="12" cy="12" r="1" fill="currentColor" />
+            <circle cx="12" cy="15.5" r="1" fill="currentColor" />
+          </svg>
+        ),
+      },
+      {
+        id: "keycloak",
+        name: "Keycloak",
+        category: "Frameworks & Skills",
+        icon: (
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M12 2L4 6v6c0 5.25 3.4 10.15 8 11.5 4.6-1.35 8-6.25 8-11.5V6l-8-4z" />
+            <circle cx="12" cy="10" r="2.5" />
+            <path d="M12 12.5V17" />
+            <path d="M12 15h2" />
+          </svg>
+        ),
+      },
+      {
         id: "nginx",
         name: "Nginx",
         category: "Frameworks & Skills",
