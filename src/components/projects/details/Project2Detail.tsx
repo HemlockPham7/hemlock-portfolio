@@ -7,16 +7,20 @@ export default function Project2Detail() {
   return (
     <div className="project-detail-body">
       <div className="project-detail-header">
-        <span className="project-detail-badge">Distributed Microservices</span>
-        <h2 className="project-detail-title">CineStream: Distributed Movie Ticket & Payment Mesh</h2>
+        <span className="project-detail-badge">Youtube Clone</span>
+        <h2 className="project-detail-title">Cloud Streaming System</h2>
         <p className="project-detail-subtitle">
-          Microservices booking system incorporating Domain-Driven Design (DDD), Saga distributed transactions, and VNPay integration.
+          Developed a scalable movie streaming platform with adaptive bitrate streaming and a real-time CDC-driven search and autocomplete system using Spring Boot, React, Kafka, Elasticsearch, PostgreSQL, S3, and CloudFront, optimized for low-latency playback and search performance.
         </p>
+      </div>
+
+      <div className="project-detail-section">
+        <h4 className="detail-section-heading">Overall Architecture</h4>
       </div>
 
       <div className="project-detail-banner">
         <Image
-          src="/images/streaming-engine.jpg"
+          src="/images/streaming-video-thumbnail.png"
           alt="CineStream system architecture"
           width={800}
           height={450}
@@ -25,28 +29,13 @@ export default function Project2Detail() {
       </div>
 
       <div className="project-detail-section">
-        <h4 className="detail-section-heading">System Overview & Architecture</h4>
-        <p>
-          CineStream is a distributed cinema booking and reservation system designed with Domain-Driven Design (DDD). 
-          It isolates order processing, seating allocation, catalog management, and payment verification into autonomous microservices. 
-          Cross-service transactions are coordinated using the Saga Pattern powered by Axon Framework.
-        </p>
-      </div>
-
-      <div className="project-detail-section">
         <h4 className="detail-section-heading">Key Engineering Highlights</h4>
         <ul className="project-detail-bullets">
           <li>
-            <strong>Saga Distributed Transactions:</strong> Implemented compensating transactions via Axon Framework to guarantee atomic seat reservations and order creation without distributed database locks.
+            <strong>Adaptive Bitrate Video Streaming:</strong> Developed a movie streaming platform using Spring Boot, React, and HLS, with S3 for media storage and CloudFront CDN for content delivery, targeting sub-3-second playback startup.
           </li>
           <li>
-            <strong>Payment Gateway Integration:</strong> Integrated VNPay with robust idempotency handling, preventing duplicate charge processing during network retry anomalies.
-          </li>
-          <li>
-            <strong>Database Schema Migrations:</strong> Managed PostgreSQL relational schemas with Flyway versioning to maintain consistent database states across all deployment environments.
-          </li>
-          <li>
-            <strong>Full Observability Pipeline:</strong> Configured Prometheus metrics, Grafana dashboards, and Logstash log shipping for real-time latency and error tracking.
+            <strong>CDC-Driven Search & Autocomplete:</strong> Built a real-time data synchronization pipeline using Debezium, Kafka, and Elasticsearch with CQRS architecture, achieving sub-2-second index synchronization and sub-100ms P95 search latency at 1,000 queries per second.
           </li>
         </ul>
       </div>
@@ -56,19 +45,20 @@ export default function Project2Detail() {
         <div className="project-tech-chips">
           <span>Java</span>
           <span>Spring Boot</span>
-          <span>Axon Framework</span>
-          <span>Saga Pattern</span>
-          <span>VNPay API</span>
+          <span>S3</span>
+          <span>Cloudfront</span>
+          <span>HLS</span>
           <span>PostgreSQL</span>
-          <span>Flyway</span>
-          <span>Grafana</span>
+          <span>Elasticsearch</span>
+          <span>Debezium</span>
+          <span>Kafka</span>
           <span>Docker</span>
         </div>
       </div>
 
       <div className="project-detail-actions">
         <a
-          href="https://cinestream.hemlock.dev"
+          href="https://www.youtube.com/watch?v=Ge2Tep4C3AM"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-primary"
@@ -76,7 +66,7 @@ export default function Project2Detail() {
           Live Demo Platform
         </a>
         <a
-          href="https://github.com/HemlockPham7/cinestream-backend"
+          href="https://github.com/HemlockPham7/cloud-streaming-system"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-secondary"

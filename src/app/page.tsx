@@ -105,13 +105,13 @@ export default function PortfolioPage() {
     },
     {
       id: "cinestream",
-      title: "CineStream: Distributed Movie Ticket & Payment Mesh",
+      title: "Cloud Streaming System",
       description:
-        "Distributed ticket booking and seat reservation engine powered by CQRS, Event Sourcing (Axon), Saga distributed transactions, and VNPay integration.",
-      image: "/images/streaming-engine.jpg",
-      tags: ["Java", "Spring Boot", "Axon Framework", "React", "VNPay", "PostgreSQL"],
-      liveDemo: "https://www.youtube.com/watch?v=979ioAqtwKA",
-      github: "https://github.com/HemlockPham7/shorten-url-deployment",
+        "Developed a scalable movie streaming platform with adaptive bitrate streaming and a real-time CDC-driven search system, leveraging Spring Boot, React, Kafka, Elasticsearch, PostgreSQL, S3, and CloudFront to deliver fast playback startup and low-latency search at scale.",
+      image: "/images/streaming-video-thumbnail.png",
+      tags: ["Java", "Spring Boot", "S3", "Cloudfront", "HLS", "Docker", "PostgreSQL", "Elasticsearch", "Kafka", "Debezium"],
+      liveDemo: "https://www.youtube.com/watch?v=Ge2Tep4C3AM",
+      github: "https://github.com/HemlockPham7/cloud-streaming-system",
     },
     {
       id: "kestrel",
@@ -280,7 +280,7 @@ export default function PortfolioPage() {
                   <span className="hero-connect-label">Connect me through</span>
                   <div className="hero-social-links">
                     <a
-                      href="https://linkedin.com/in/hemlockpham"
+                      href="https://www.linkedin.com/in/hemlock-pham"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hero-social-btn"
@@ -296,28 +296,6 @@ export default function PortfolioPage() {
                         <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.79v8.37H6.46v-8.37M7.86 6.81a1.63 1.63 0 1 0 0 3.26 1.63 1.63 0 0 0 0-3.26Z" />
                       </svg>
                       <span>LinkedIn</span>
-                    </a>
-
-                    <a
-                      href="mailto:hemlockpham7@gmail.com"
-                      className="hero-social-btn"
-                      aria-label="Send email to Viet-Hoang Pham via Gmail"
-                    >
-                      <svg
-                        width="25"
-                        height="25"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        aria-hidden="true"
-                      >
-                        <rect width="20" height="16" x="2" y="4" rx="2" />
-                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                      </svg>
-                      <span>Gmail</span>
                     </a>
 
                     <a
@@ -337,6 +315,28 @@ export default function PortfolioPage() {
                         <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z" />
                       </svg>
                       <span>GitHub</span>
+                    </a>
+
+                    <a
+                      href="mailto:hoangpham292002@gmail.com"
+                      className="hero-social-btn"
+                      aria-label="Send email to Viet-Hoang Pham via Gmail"
+                    >
+                      <svg
+                        width="25"
+                        height="25"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                      >
+                        <rect width="20" height="16" x="2" y="4" rx="2" />
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                      </svg>
+                      <span>Gmail</span>
                     </a>
                   </div>
                 </div>
@@ -377,16 +377,12 @@ export default function PortfolioPage() {
                 </p>
                 <div className="about-stats-grid">
                   <div className="about-stat-box">
-                    <div className="about-stat-val">8.20 / 10</div>
-                    <div className="about-stat-lbl">GPA</div>
+                    <div className="about-stat-val">8.20 / 10 GPA</div>
+                    <div className="about-stat-lbl">APCS - Advanced Program in CS</div>
                   </div>
                   <div className="about-stat-box">
                     <div className="about-stat-val">7.0 Overall</div>
                     <div className="about-stat-lbl">IELTS (7.5 in Speaking)</div>
-                  </div>
-                  <div className="about-stat-box">
-                    <div className="about-stat-val">APCS</div>
-                    <div className="about-stat-lbl">Advanced Program in Computer Science</div>
                   </div>
                 </div>
               </div>
