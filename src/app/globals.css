@@ -403,9 +403,9 @@ body.portfolio-body {
 }
 
 .hero-media-card {
-  background-color: var(--surface-container-lowest);
-  border: 1px solid var(--border-quiet);
-  border-radius: var(--radius-lg);
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
   overflow: hidden;
 }
 
@@ -413,7 +413,7 @@ body.portfolio-body {
   position: relative;
   width: 100%;
   aspect-ratio: 1 / 1;
-  background-color: var(--surface-container);
+  background-color: transparent;
 }
 
 .hero-portrait-frame img {

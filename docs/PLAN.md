@@ -72,6 +72,8 @@ Refactor the Hero section to present an approachable, authoritative developer id
   - Scaled up the "Connect me through" section and buttons by ~40% (larger fonts, enhanced padding, 25px SVG vector icons, expanded tap targets).
 - [x] **Headline & Copy Refinement:**
   - Clear introduction: Junior Software Developer / Software Engineer with 1.5+ years of experience.
+- [x] **Background-Removed Portrait Asset:**
+  - Created `public/images/portrait_remove_background.jpg` from `portrait.jpg`, replacing the wood background with a flat `#F9F9F9` (matches `--surface`). Wired into the Hero `<Image>`; `.hero-media-card` / `.hero-portrait-frame` made borderless and transparent so the portrait blends into the page.
 
 #### Acceptance Criteria
 - Clicking "Download CV" downloads the PDF file cleanly without 404 errors.

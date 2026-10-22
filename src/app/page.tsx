@@ -345,7 +345,7 @@ export default function PortfolioPage() {
               <div className="hero-media-card">
                 <div className="hero-portrait-frame">
                   <Image
-                    src="/images/portrait.jpg"
+                    src="/images/portrait_remove_background.jpg"
                     alt="Viet-Hoang Pham portrait"
                     width={600}
                     height={700}
