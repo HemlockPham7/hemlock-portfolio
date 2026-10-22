@@ -56,6 +56,8 @@ export default function PreviousJobDetail() {
           <span className="timeline-tag-item">PostgreSQL</span>
           <span className="timeline-tag-item">Swagger</span>
           <span className="timeline-tag-item">Docker</span>
+          <span className="timeline-tag-item">API Gateway</span>
+          <span className="timeline-tag-item">Keycloak</span>
         </div>
       </div>
     </div>

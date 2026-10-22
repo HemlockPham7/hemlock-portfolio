@@ -15,15 +15,29 @@ export default function Project2Detail() {
       </div>
 
       <div className="project-detail-section">
-        <h4 className="detail-section-heading">Overall Architecture</h4>
+        <h4 className="detail-section-heading">Video Pre-processing Architecture</h4>
       </div>
 
       <div className="project-detail-banner">
         <Image
-          src="/images/streaming-video-thumbnail.png"
+          src="/images/video-processing.png"
           alt="CineStream system architecture"
-          width={800}
-          height={450}
+          width={1200}
+          height={1000}
+          className="project-banner-img"
+        />
+      </div>
+
+      <div className="project-detail-section">
+        <h4 className="detail-section-heading">Video Streaming Architecture</h4>
+      </div>
+
+      <div className="project-detail-banner">
+        <Image
+          src="/images/video-streaming.png"
+          alt="CineStream system architecture"
+          width={1200}
+          height={1000}
           className="project-banner-img"
         />
       </div>
@@ -35,7 +49,7 @@ export default function Project2Detail() {
             <strong>Adaptive Bitrate Video Streaming:</strong> Developed a movie streaming platform using Spring Boot, React, and HLS, with S3 for media storage and CloudFront CDN for content delivery, targeting sub-3-second playback startup.
           </li>
           <li>
-            <strong>CDC-Driven Search & Autocomplete:</strong> Built a real-time data synchronization pipeline using Debezium, Kafka, and Elasticsearch with CQRS architecture, achieving sub-2-second index synchronization and sub-100ms P95 search latency at 1,000 queries per second.
+            <strong>CDC-Driven Search & Autocomplete:</strong> Built a real-time data synchronization pipeline using Debezium, Kafka, and Elasticsearch with CQRS architecture, achieving sub-2-second index synchronization and sub-200ms P95 search latency at 3,000 queries per second.
           </li>
         </ul>
       </div>
@@ -45,6 +59,7 @@ export default function Project2Detail() {
         <div className="project-tech-chips">
           <span>Java</span>
           <span>Spring Boot</span>
+          <span>Redis</span>
           <span>S3</span>
           <span>Cloudfront</span>
           <span>HLS</span>
@@ -63,7 +78,7 @@ export default function Project2Detail() {
           rel="noopener noreferrer"
           className="btn-primary"
         >
-          Live Demo Platform
+          Youtube Demo Platform
         </a>
         <a
           href="https://github.com/HemlockPham7/cloud-streaming-system"

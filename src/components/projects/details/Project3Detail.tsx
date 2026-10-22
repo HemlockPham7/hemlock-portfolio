@@ -67,7 +67,7 @@ export default function Project3Detail() {
           rel="noopener noreferrer"
           className="btn-primary"
         >
-          Live Demo Platform
+          Youtube Demo Platform
         </a>
         <a
           href="https://github.com/HemlockPham7/shorten-url-deployment"

@@ -99,7 +99,7 @@ export default function PortfolioPage() {
       description:
         "An event-driven multi-tier caching system (L1 Caffeine + L2 Redis) with Redisson locking, Debezium CDC synchronization, and observability.",
       image: "/images/multi-level-cache-thumbnail.png",
-      tags: ["Java", "Spring Boot", "Kafka", "Debezium", "PostgreSQL", "Redisson", "Caffeine", "Docker", "Prometheus", "Grafana", "Tempo", "Logstash"],
+      tags: ["Java", "Spring Boot", "Kafka", "Debezium", "PostgreSQL", "Redis", "Caffeine", "Docker", "Prometheus", "Grafana", "Tempo", "Logstash"],
       liveDemo: "https://www.youtube.com/watch?v=FaJ3cvN6Fmc",
       github: "https://github.com/HemlockPham7/evaluate-advanced-concept",
     },
@@ -109,7 +109,7 @@ export default function PortfolioPage() {
       description:
         "Developed a scalable movie streaming platform with adaptive bitrate streaming and a real-time CDC-driven search system, leveraging Spring Boot, React, Kafka, Elasticsearch, PostgreSQL, S3, and CloudFront to deliver fast playback startup and low-latency search at scale.",
       image: "/images/streaming-video-thumbnail.png",
-      tags: ["Java", "Spring Boot", "S3", "Cloudfront", "HLS", "Docker", "PostgreSQL", "Elasticsearch", "Kafka", "Debezium"],
+      tags: ["Java", "Spring Boot", "Redis", "S3", "Cloudfront", "HLS", "Docker", "PostgreSQL", "Elasticsearch", "Kafka", "Debezium"],
       liveDemo: "https://www.youtube.com/watch?v=Ge2Tep4C3AM",
       github: "https://github.com/HemlockPham7/cloud-streaming-system",
     },
@@ -229,7 +229,7 @@ export default function PortfolioPage() {
                 </p>
                 <div className="hero-actions">
                   <a
-                    href="/cv.pdf"
+                    href="/Hoang_Resume.pdf"
                     download="Viet-Hoang-Pham-CV.pdf"
                     className="btn-primary"
                     aria-label="Download CV of Viet-Hoang Pham"
@@ -348,7 +348,7 @@ export default function PortfolioPage() {
                     src="/images/portrait.jpg"
                     alt="Viet-Hoang Pham portrait"
                     width={600}
-                    height={600}
+                    height={700}
                     priority
                   />
                 </div>
@@ -399,7 +399,7 @@ export default function PortfolioPage() {
                     <div className="about-stat-lbl">Years Industry Experience</div>
                   </div>
                   <div className="about-stat-box">
-                    <div className="about-stat-val">3</div>
+                    <div className="about-stat-val">3+</div>
                     <div className="about-stat-lbl">Competition Awards</div>
                   </div>
                 </div>
@@ -410,7 +410,6 @@ export default function PortfolioPage() {
             <div className="awards-section-head">
               <div>
                 <h3 className="awards-section-title">Honors & Competition Awards</h3>
-                <span className="awards-section-desc">Selected recognitions from university contests, hackathons, and academic achievements</span>
               </div>
             </div>
 
@@ -496,6 +495,9 @@ export default function PortfolioPage() {
                   <h3 className="timeline-job-role">Junior Software Developer</h3>
                   <h4 className="timeline-job-company">Netcompany Group A/S</h4>
                   <p className="timeline-job-summary">
+                    Internal platform for building custom tax management, lending, and banking solutions.
+                  </p>
+                  <p className="timeline-job-summary">
                     Built scalable backend services handling 10K QPS, implemented sub-200ms Elasticsearch queries across 500K+ records, optimized distributed caching and database performance, and automated AWS S3 storage pipelines, and streamlined CI/CD workflows.
                   </p>
                   <div className="timeline-tag-list">
@@ -536,6 +538,9 @@ export default function PortfolioPage() {
                   <h3 className="timeline-job-role">Intern Software Developer</h3>
                   <h4 className="timeline-job-company">Payoo VietUnion Group - HCMUS Graduation</h4>
                   <p className="timeline-job-summary">
+                    An application for managing movie ticket bookings, sales, and purchases.
+                  </p>
+                  <p className="timeline-job-summary">
                     Developed Spring Boot microservices for movie ticket management, integrated VNPay payments, implemented Saga-based distributed transactions with idempotency, and enhanced database consistency and system observability.
                   </p>
                   <div className="timeline-tag-list">
@@ -548,9 +553,11 @@ export default function PortfolioPage() {
                     <span className="timeline-tag-item">Tempo</span>
                     <span className="timeline-tag-item">Prometheous</span>
                     <span className="timeline-tag-item">Logstash</span>
+                    <span className="timeline-tag-item">Docker</span>
                     <span className="timeline-tag-item">PostgreSQL</span>
                     <span className="timeline-tag-item">Swagger</span>
-                    <span className="timeline-tag-item">Docker</span>
+                    <span className="timeline-tag-item">API Gateway</span>
+                    <span className="timeline-tag-item">Keycloak</span>
                   </div>
                   <div className="timeline-view-detail-btn">
                     <span>View Detailed Breakdown</span>
@@ -649,7 +656,7 @@ export default function PortfolioPage() {
                           <polyline points="15 3 21 3 21 9" />
                           <line x1="10" y1="14" x2="21" y2="3" />
                         </svg>
-                        Live Demo
+                        Youtube Demo
                       </a>
                       <a
                         href={project.github}

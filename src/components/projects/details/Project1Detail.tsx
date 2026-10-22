@@ -85,7 +85,7 @@ export default function Project1Detail() {
           rel="noopener noreferrer"
           className="btn-primary"
         >
-          Live Demo Platform
+          Youtube Demo Platform
         </a>
         <a
           href="https://github.com/HemlockPham7/evaluate-advanced-concept"
