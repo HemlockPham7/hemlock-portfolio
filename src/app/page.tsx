@@ -230,9 +230,9 @@ export default function PortfolioPage() {
                 <div className="hero-actions">
                   <a
                     href="/Hoang_Resume.pdf"
-                    download="Viet-Hoang-Pham-CV.pdf"
+                    download="Viet-Hoang-Pham-Resume.pdf"
                     className="btn-primary"
-                    aria-label="Download CV of Viet-Hoang Pham"
+                    aria-label="Download Resume of Viet-Hoang Pham"
                   >
                     <svg
                       width="18"
@@ -377,7 +377,7 @@ export default function PortfolioPage() {
                 </p>
                 <div className="about-stats-grid">
                   <div className="about-stat-box">
-                    <div className="about-stat-val">8.20 / 10 GPA</div>
+                    <div className="about-stat-val">3.50 / 4.0 GPA</div>
                     <div className="about-stat-lbl">APCS - Advanced Program in CS</div>
                   </div>
                   <div className="about-stat-box">
