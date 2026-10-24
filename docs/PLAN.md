@@ -99,8 +99,14 @@ Highlight educational credentials, foundational software engineering background,
     - Issuing organization / competition name and date.
     - Brief summary of the project or criterion that won the prize.
     - Extensible schema ready to populate with specific details upon user review.
-- [x] **Visual Layout:**
+- [x] **Visual Layout & Interactive Certificate Popups:**
   - Modern card deck with subtle borders, elevation, and accent icon badges.
+  - Interactive clickable award cards (`role="button"`, keyboard accessible with Enter/Space, hover elevation).
+  - Modal certificate preview displaying full resolution images:
+    - **1st Award (ICPC):** Displays `/certificate-images/icpc.png` with direct verification link to `https://icpc.global/ICPCID/M62U1T5VKZ2H`.
+    - **2nd Award (National Olympiad / VNOI):** Displays `/certificate-images/nation.png`.
+    - **3rd Award (HCMC City Informatics):** Displays `/certificate-images/city.jpg`.
+  - Minimalist popup interface focusing purely on the certificate image without clutter.
 
 #### Acceptance Criteria
 - Clear presentation of HCMUS degree and 1.5+ years industry experience.

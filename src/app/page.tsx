@@ -12,6 +12,7 @@ import Project3Detail from "@/components/projects/details/Project3Detail";
 import Project4Detail from "@/components/projects/details/Project4Detail";
 import Project5Detail from "@/components/projects/details/Project5Detail";
 import SkillsSection from "@/components/skills/SkillsSection";
+import AwardCertificateModal, { AwardItem } from "@/components/about/AwardCertificateModal";
 
 interface FeaturedProject {
   id: string;
@@ -23,18 +24,10 @@ interface FeaturedProject {
   github: string;
 }
 
-interface AwardItem {
-  id: string;
-  prizeTier: string;
-  tierClass: "gold" | "silver" | "merit";
-  title: string;
-  organization: string;
-  date: string;
-  description: string;
-  tags: string[];
-}
-
 export default function PortfolioPage() {
+  // Award Certificate Modal State
+  const [selectedAward, setSelectedAward] = useState<AwardItem | null>(null);
+
   // Experience Details Modal State
   const [activeExpModal, setActiveExpModal] = useState<"netcompany" | "previous" | null>(null);
 
@@ -156,6 +149,10 @@ export default function PortfolioPage() {
       description:
         "Awarded Second Prize at the ICPC Asia Can Tho Regional Contest, an international collegiate programming competition, placing 12th out of 113 teams in 2020-2021.",
       tags: ["ICPC", "Regional Contest", "Second Prize", "Competitive Programming", "HCMUS"],
+      image: "/certificate-images/icpc.png",
+      imageWidth: 1062,
+      imageHeight: 2202,
+      link: "https://icpc.global/ICPCID/M62U1T5VKZ2H",
     },
     {
       id: "award-2",
@@ -167,6 +164,9 @@ export default function PortfolioPage() {
       description:
         "Awarded Consolation Prize in the Vietnam Olympiad in Informatics (VNOI), a national-level informatics competition for high school students in Vietnam, representing High School for the Gifted (PTNK).",
       tags: ["VNOI", "National Contest", "Consolation Prize", "Competitive Programming", "PTNK"],
+      image: "/certificate-images/nation.png",
+      imageWidth: 1855,
+      imageHeight: 1370,
     },
     {
       id: "award-3",
@@ -178,6 +178,9 @@ export default function PortfolioPage() {
       description:
         "Awarded First Prize in the Ho Chi Minh City Informatics Competition for Gifted Students, a city-level programming competition for high school students, representing High School for the Gifted (PTNK).",
       tags: ["HCMC", "First Prize", "Competitive Programming", "PTNK"],
+      image: "/certificate-images/city.jpg",
+      imageWidth: 1855,
+      imageHeight: 1325,
     },
   ];
 
@@ -415,7 +418,20 @@ export default function PortfolioPage() {
 
             <div className="awards-grid">
               {awardPrizes.map((award) => (
-                <div key={award.id} className="award-card">
+                <div
+                  key={award.id}
+                  className="award-card"
+                  onClick={() => setSelectedAward(award)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      setSelectedAward(award);
+                    }
+                  }}
+                  aria-label={`View certificate for ${award.title}`}
+                >
                   <div className="award-top">
                     <span className={`award-tier-badge award-tier-${award.tierClass}`}>
                       {award.tierClass === "gold" && "🥇 "}
@@ -460,6 +476,17 @@ export default function PortfolioPage() {
                         {tag}
                       </span>
                     ))}
+                  </div>
+
+                  <div className="award-card-footer">
+                    <span className="award-view-btn">
+                      <span>View Certificate</span>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <path d="M15 3h6v6" />
+                        <path d="M10 14 21 3" />
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                      </svg>
+                    </span>
                   </div>
                 </div>
               ))}
@@ -738,6 +765,13 @@ export default function PortfolioPage() {
         {activeProjectModal === "cloudvault" && <Project4Detail />}
         {activeProjectModal === "devnexus" && <Project5Detail />}
       </ProjectDetailModal>
+
+      {/* Award Certificate Modal */}
+      <AwardCertificateModal
+        isOpen={selectedAward !== null}
+        onClose={() => setSelectedAward(null)}
+        award={selectedAward}
+      />
     </div>
   );
 }
